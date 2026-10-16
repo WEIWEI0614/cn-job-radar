@@ -107,12 +107,16 @@ def _card(s: ScoredJob, alert_score: float, new_urls: set[str], weights: dict[st
     if s.gaps:
         gap_line = f'<div class="meta" style="color:#d29922">⚠️ 缺口：{"、".join(html.escape(str(x)) for x in s.gaps)}</div>'
 
+    # 预先拼好，不要塞进 f-string —— Python 3.11 及更早不允许 f-string 表达式里出现反斜杠
+    tags_html = '<div class="tags">' + "".join(tags) + "</div>" if tags else ""
+    score_cls = " hi" if s.score >= alert_score else ""
+
     return (
         f'<div class="{cls}">'
-        f'<div class="row"><h3>{title}{badge}</h3><div class="score{" hi" if s.score >= alert_score else ""}">{s.score:.0f}</div></div>'
+        f'<div class="row"><h3>{title}{badge}</h3><div class="score{score_cls}">{s.score:.0f}</div></div>'
         f'<div class="meta">{" ".join(meta)}</div>'
         f'{_bar(s.breakdown, weights)}'
-        f'{("<div class=\"tags\">" + "".join(tags) + "</div>") if tags else ""}'
+        f'{tags_html}'
         f'{gap_line}</div>'
     )
 
