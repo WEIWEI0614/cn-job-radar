@@ -1,0 +1,33 @@
+# 招聘门户探测结果
+# 独立于 companies.yaml 存放，方便被脚本 / AI 自动追加
+# 加载优先级：本文件 > companies.yaml 里的 portal 字段
+
+portals:
+  example-feishu:
+    type: feishu
+    arg: "xxxxxxxx.jobs.feishu.cn"
+    http_status: 200
+    verified_at: "2026-10-16"
+    source: "公司官网「加入我们」跳转"
+
+  example-beisen:
+    type: beisen
+    arg: "example"
+    http_status: 200
+    verified_at: "2026-10-16"
+    source: "搜索结果"
+
+  # 非 ATS 入口（官网 / 猎聘 / BOSS）—— 只记录，不自动抓取
+  example-web:
+    type: web
+    arg: "https://example.com/careers"
+    http_status: 200
+    verified_at: "2026-10-16"
+    source: "官网"
+
+  # 已知失效的记录，避免重复踩坑
+  example-dead:
+    type: invalid
+    arg: "dead.jobs.feishu.cn"
+    http_status: 404
+    verified_at: "2026-10-16"

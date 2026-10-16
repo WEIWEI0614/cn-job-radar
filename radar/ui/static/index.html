@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>求职雷达 · cn-job-radar</title>
+<style>
+:root{--bg:#0d1117;--panel:#161b22;--panel2:#1c2128;--line:#30363d;--fg:#e6edf3;--dim:#8b949e;
+--accent:#58a6ff;--ok:#3fb950;--warn:#d29922;--hot:#ff7b72;--purple:#a371f7;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:14px/1.65 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}
+header{position:sticky;top:0;z-index:10;background:rgba(13,17,23,.92);backdrop-filter:blur(8px);
+border-bottom:1px solid var(--line);padding:14px 24px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+h1{font-size:17px;margin:0;font-weight:600}
+h1 small{color:var(--dim);font-weight:400;font-size:12px;margin-left:8px}
+.spacer{flex:1}
+.pill{font-size:12px;color:var(--dim);background:var(--panel2);border:1px solid var(--line);
+border-radius:20px;padding:3px 10px}
+.pill b{color:var(--fg)}
+button{font:inherit;font-size:13px;border-radius:7px;border:1px solid var(--line);
+background:var(--panel2);color:var(--fg);padding:7px 14px;cursor:pointer;transition:.15s}
+button:hover{border-color:var(--accent);color:var(--accent)}
+button.primary{background:#238636;border-color:#2ea043;color:#fff}
+button.primary:hover{background:#2ea043;color:#fff}
+button:disabled{opacity:.5;cursor:not-allowed}
+nav{display:flex;gap:4px;padding:14px 24px 0}
+nav a{padding:8px 16px;border-radius:8px 8px 0 0;color:var(--dim);cursor:pointer;font-size:13.5px;
+border:1px solid transparent;border-bottom:none}
+nav a.on{background:var(--panel);color:var(--fg);border-color:var(--line)}
+main{padding:20px 24px 60px;max-width:1180px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px;margin-bottom:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:16px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:13px 15px}
+.stat .n{font-size:23px;font-weight:600;color:var(--accent);line-height:1.2}
+.stat .l{font-size:12px;color:var(--dim);margin-top:3px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:14px 16px;margin-bottom:10px}
+.card.alert{border-left:3px solid var(--hot)}
+.card.new{border-left:3px solid var(--ok)}
+.row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.card h3{font-size:14.5px;margin:0;font-weight:550}
+.score{font-size:17px;font-weight:600;color:var(--ok);white-space:nowrap}
+.score.hi{color:var(--hot)}
+.meta{color:var(--dim);font-size:12.5px;margin-top:6px;display:flex;gap:14px;flex-wrap:wrap}
+.tags{margin-top:9px;display:flex;gap:6px;flex-wrap:wrap}
+.tag{font-size:11.5px;padding:2px 8px;border-radius:20px;background:var(--panel2);
+border:1px solid var(--line);color:var(--dim)}
+.tag.good{color:var(--ok);border-color:#238636}
+.tag.gap{color:var(--warn);border-color:#9e6a03}
+.bar{height:5px;background:var(--panel2);border-radius:3px;margin-top:10px;overflow:hidden;display:flex}
+.bar i{display:block;height:100%}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+label{display:block;font-size:13px;color:var(--dim);margin:14px 0 6px}
+input[type=text],input[type=number],select,textarea{width:100%;background:var(--panel2);
+border:1px solid var(--line);border-radius:7px;color:var(--fg);padding:8px 11px;font:inherit;font-size:13px}
+textarea{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;min-height:220px;resize:vertical}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+.chip{border:1px solid var(--line);background:var(--panel2);border-radius:20px;padding:6px 13px;
+font-size:12.5px;cursor:pointer;transition:.15s;user-select:none}
+.chip:hover{border-color:var(--accent)}
+.chip.on{background:#1f6feb22;border-color:var(--accent);color:var(--accent)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+th,td{text-align:left;padding:7px 9px;border-bottom:1px solid var(--line)}
+th{color:var(--dim);font-weight:500;position:sticky;top:0;background:var(--panel)}
+.log{background:#010409;border:1px solid var(--line);border-radius:7px;padding:12px;
+font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:#8b949e;
+max-height:300px;overflow:auto;white-space:pre-wrap;line-height:1.55}
+.empty{color:var(--dim);font-style:italic;padding:20px 0;text-align:center}
+.hint{font-size:12.5px;color:var(--dim);margin-top:6px}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--panel);
+border:1px solid var(--ok);color:var(--ok);padding:10px 20px;border-radius:8px;font-size:13px;
+opacity:0;transition:.25s;pointer-events:none;z-index:99}
+.toast.on{opacity:1}
+</style>
+</head>
+<body>
+<header>
+  <h1>🎯 求职雷达<small>cn-job-radar</small></h1>
+  <span class="pill" id="pHome">加载中…</span>
+  <span class="spacer"></span>
+  <span class="pill" id="pStat">—</span>
+  <button class="primary" id="btnRun">▶ 跑一次</button>
+</header>
+
+<nav>
+  <a class="on" data-tab="result">岗位结果</a>
+  <a data-tab="profile">求职画像</a>
+  <a data-tab="companies">公司池</a>
+  <a data-tab="run">运行日志</a>
+</nav>
+
+<main>
+  <!-- 结果 -->
+  <section id="tab-result">
+    <div class="grid" id="stats"></div>
+    <div id="jobs"></div>
+  </section>
+
+  <!-- 画像 -->
+  <section id="tab-profile" hidden>
+    <div class="panel">
+      <h3 style="margin:0 0 4px">行业</h3>
+      <div class="hint">可多选。每个行业包预置了岗位关键词和该赛道的活跃投资机构。</div>
+      <div class="chips" id="industryChips"></div>
+
+      <div class="two">
+        <div>
+          <label>目标城市（逗号分隔，第一个为主城市）</label>
+          <input type="text" id="fCities" placeholder="北京, 上海">
+        </div>
+        <div>
+          <label>高优先级阈值（0-100）</label>
+          <input type="number" id="fAlert" min="0" max="100" step="1">
+        </div>
+      </div>
+
+      <label>岗位轨道</label>
+      <div class="chips" id="trackChips"></div>
+
+      <div class="two">
+        <div>
+          <label>最低月薪（千元，0 = 不限）</label>
+          <input type="number" id="fSalary" min="0" step="1">
+        </div>
+        <div>
+          <label>只看目标城市内岗位</label>
+          <select id="fStrict"><option value="false">否，外地降权保留</option><option value="true">是，外地直接丢弃</option></select>
+        </div>
+      </div>
+
+      <label>排除词（逗号分隔，命中岗位名即丢弃）</label>
+      <input type="text" id="fExclude" placeholder="实习, 外包, 校招">
+
+      <div style="margin-top:18px;display:flex;gap:10px">
+        <button class="primary" id="btnSaveProfile">保存画像</button>
+        <button id="btnReload">放弃修改</button>
+      </div>
+      <div class="hint">保存后回到「岗位结果」点「跑一次」即可生效。改权重需要直接编辑 profile.yaml。</div>
+    </div>
+  </section>
+
+  <!-- 公司池 -->
+  <section id="tab-companies" hidden>
+    <div class="panel">
+      <div class="row">
+        <div><h3 style="margin:0">公司池</h3>
+        <div class="hint">系统只会看到这里的公司。<b>加一家 = 多盯一家。</b>带 <code>portal</code> 的公司会被自动抓取。</div></div>
+        <button id="btnSaveCompanies">保存</button>
+      </div>
+      <div style="max-height:520px;overflow:auto;margin-top:14px">
+        <table><thead><tr><th>名称</th><th>城市</th><th>赛道</th><th>门户</th><th>优先级</th><th></th></tr></thead>
+        <tbody id="coBody"></tbody></table>
+      </div>
+      <div class="hint">高级编辑（融资信息、门户配置）请直接改 <code>~/.cn-job-radar/config/companies.yaml</code>。</div>
+    </div>
+  </section>
+
+  <!-- 运行 -->
+  <section id="tab-run" hidden>
+    <div class="panel">
+      <div class="row"><h3 style="margin:0">运行日志</h3><button id="btnRefreshLog">刷新</button></div>
+      <div class="log" id="logBox" style="margin-top:12px">还没有运行记录。</div>
+    </div>
+  </section>
+</main>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const $ = s => document.querySelector(s);
+const api = async (p, body) => {
+  const r = await fetch(p, body ? {method:'POST', headers:{'Content-Type':'application/json'},
+                                       body: JSON.stringify(body)} : {});
+  return r.json();
+};
+const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let STATE = {profile:null, industries:[], companies:[]};
+
+function toast(msg){ const t=$('#toast'); t.textContent=msg; t.classList.add('on');
+  setTimeout(()=>t.classList.remove('on'), 1800); }
+
+document.querySelectorAll('nav a').forEach(a => a.onclick = () => {
+  document.querySelectorAll('nav a').forEach(x => x.classList.remove('on'));
+  a.classList.add('on');
+  ['result','profile','companies','run'].forEach(t => $('#tab-'+t).hidden = (t !== a.dataset.tab));
+});
+
+async function load(){
+  const d = await api('/api/bootstrap');
+  STATE.industries = d.industries || [];
+  STATE.profile = d.profile || null;
+  STATE.companies = d.companies || [];
+  $('#pHome').textContent = d.home || '';
+  const s = d.stats || {};
+  $('#pStat').innerHTML = `公司 <b>${s.total||0}</b> · 可抓门户 <b>${s.with_portal||0}</b>`;
+
+  // 统计
+  const rep = d.report || {};
+  const jobs = rep.jobs || [];
+  const alert = (STATE.profile?.output?.alert_score) ?? 80;
+  const hot = jobs.filter(j => j.score >= alert).length;
+  $('#stats').innerHTML = [
+    [jobs.length,'本次评分岗位'],[hot,`高优先级（≥${alert}）`],
+    [s.with_portal||0,'可自动抓取门户'],[s.total||0,'公司池规模']
+  ].map(([n,l]) => `<div class="stat"><div class="n">${n}</div><div class="l">${l}</div></div>`).join('');
+
+  renderJobs(jobs, alert);
+  renderProfile();
+  renderCompanies();
+}
+
+function renderJobs(jobs, alert){
+  if(!jobs.length){
+    $('#jobs').innerHTML = `<div class="empty">还没有结果。点右上角「跑一次」，或先在「公司池」里加公司。</div>`;
+    return;
+  }
+  const byTrack = {};
+  jobs.forEach(j => (byTrack[j.track] = byTrack[j.track] || []).push(j));
+  const names = {industry:'产业岗', investment:'投资岗'};
+  let html = '';
+  for(const [track, list] of Object.entries(byTrack)){
+    html += `<h2 style="font-size:16px;margin:22px 0 12px">${names[track] || track} · ${list.length} 条</h2>`;
+    list.slice(0, 40).forEach(j => {
+      const hi = j.score >= alert;
+      const tags = [
+        ...(j.notes||[]).slice(0,2).map(n=>`<span class="tag good">${esc(n)}</span>`),
+        ...(j.strength_hits||[]).slice(0,4).map(n=>`<span class="tag">${esc(n)}</span>`),
+        ...(j.gaps||[]).slice(0,3).map(n=>`<span class="tag gap">缺：${esc(n)}</span>`)
+      ].join('');
+      const t = j.title || '';
+      const title = j.url ? `<a href="${esc(j.url)}" target="_blank" rel="noopener">${esc(t)}</a>` : esc(t);
+      const meta = [`🏢 ${esc(j.company)}`, j.location?`📍 ${esc(j.location)}`:'' , j.salary?`💰 ${esc(j.salary)}`:'',
+                    j.posted?`🗓 ${esc(String(j.posted).slice(0,10))}`:'', j.source?`· ${esc(j.source)}`:''].filter(Boolean).join(' ');
+      html += `<div class="card${hi?' alert':''}">
+        <div class="row"><h3>${title}</h3><div class="score${hi?' hi':''}">${Math.round(j.score)}</div></div>
+        <div class="meta">${meta}</div>
+        ${tags?`<div class="tags">${tags}</div>`:''}</div>`;
+    });
+  }
+  $('#jobs').innerHTML = html;
+}
+
+function renderProfile(){
+  const p = STATE.profile;
+  if(!p){ $('#industryChips').innerHTML = '<span class="hint">还没有画像，请先在命令行运行 `radar init`。</span>'; return; }
+  const chosen = new Set(p.industries || []);
+  $('#industryChips').innerHTML = STATE.industries.map(i =>
+    `<div class="chip${chosen.has(i.id)?' on':''}" data-id="${i.id}" title="${esc(i.description||'')}">${esc(i.name)}</div>`
+  ).join('');
+  document.querySelectorAll('#industryChips .chip').forEach(c => c.onclick = () => c.classList.toggle('on'));
+
+  $('#fCities').value = (p.filters?.cities || []).join(', ');
+  $('#fAlert').value = p.output?.alert_score ?? 80;
+  $('#fSalary').value = p.filters?.min_salary_k ?? 0;
+  $('#fStrict').value = String(!!p.filters?.city_strict);
+  $('#fExclude').value = (p.filters?.exclude_keywords || []).join(', ');
+
+  const tracks = p.tracks || {};
+  $('#trackChips').innerHTML = Object.entries(tracks).map(([k,v]) =>
+    `<div class="chip${v.enabled?' on':''}" data-track="${k}">${esc(v.label||k)}</div>`).join('');
+  document.querySelectorAll('#trackChips .chip').forEach(c => c.onclick = () => c.classList.toggle('on'));
+}
+
+$('#btnSaveProfile').onclick = async () => {
+  const p = JSON.parse(JSON.stringify(STATE.profile));
+  p.industries = [...document.querySelectorAll('#industryChips .chip.on')].map(c => c.dataset.id);
+  p.filters = p.filters || {};
+  p.filters.cities = $('#fCities').value.split(/[,，]/).map(s=>s.trim()).filter(Boolean);
+  p.filters.min_salary_k = parseInt($('#fSalary').value || 0, 10);
+  p.filters.city_strict = $('#fStrict').value === 'true';
+  p.filters.exclude_keywords = $('#fExclude').value.split(/[,，]/).map(s=>s.trim()).filter(Boolean);
+  p.output = p.output || {};
+  p.output.alert_score = parseInt($('#fAlert').value || 80, 10);
+  document.querySelectorAll('#trackChips .chip').forEach(c => {
+    if(p.tracks[c.dataset.track]) p.tracks[c.dataset.track].enabled = c.classList.contains('on');
+  });
+  await api('/api/profile', {profile:p});
+  STATE.profile = p;
+  toast('画像已保存');
+};
+
+$('#btnReload').onclick = () => renderProfile();
+
+function renderCompanies(){
+  const co = STATE.companies || [];
+  if(!co.length){
+    $('#coBody').innerHTML = `<tr><td colspan="6" class="empty">公司池是空的。直接编辑 <code>~/.cn-job-radar/config/companies.yaml</code> 添加。</td></tr>`;
+    return;
+  }
+  $('#coBody').innerHTML = co.map(c => `<tr>
+    <td>${esc(c.name)}</td><td>${esc(c.city||'')}</td>
+    <td>${esc((c.tracks||[]).join('/'))}</td>
+    <td>${c.portal ? '<span class="tag good">'+esc(c.portal.type)+'</span>' : '<span class="tag">—</span>'}</td>
+    <td>${esc(c.priority ?? '')}</td>
+    <td><button data-del="${esc(c.id)}">删</button></td></tr>`).join('');
+  document.querySelectorAll('#coBody [data-del]').forEach(b => b.onclick = () => {
+    STATE.companies = STATE.companies.filter(x => x.id !== b.dataset.del);
+    renderCompanies();
+  });
+}
+
+$('#btnSaveCompanies').onclick = async () => {
+  await api('/api/companies', {companies: STATE.companies});
+  toast('公司池已保存');
+};
+
+$('#btnRun').onclick = async () => {
+  await api('/api/run', {extra: []});
+  toast('已启动，切到「运行日志」查看进度');
+  pollLog();
+};
+$('#btnRefreshLog').onclick = pollLog;
+
+async function pollLog(){
+  const d = await api('/api/run-log');
+  $('#logBox').textContent = (d.log||[]).join('\n') || '还没有运行记录。';
+  $('#logBox').scrollTop = $('#logBox').scrollHeight;
+  if(d.running) setTimeout(pollLog, 1200);
+  else if(d.ok !== null){ load(); toast(d.ok ? '完成，结果已更新' : '运行失败，看日志'); }
+}
+
+load();
+</script>
+</body>
+</html>

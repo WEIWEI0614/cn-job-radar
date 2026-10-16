@@ -1,0 +1,50 @@
+# 示例公司池 —— 复制到 ~/.cn-job-radar/config/companies.yaml 后按需修改
+#
+# 字段说明：
+#   id            短标识（英文）。也用作抓取引擎里的 key，不要重复
+#   name          显示名称
+#   city/district 城市 / 区
+#   tracks        赛道标签，仅用于展示和分类
+#   funding       最新融资：轮次 / 金额 / 日期 / 领投 / 跟投
+#   tier1_backers 一线机构背书 —— 直接决定「公司质量」得分
+#   portal        招聘门户。type 取 feishu / moka / beisen
+#   priority      1=核心目标  2=重要  3=观察
+#   confidence    verified（已核实）/ reported（媒体报道）/ unverified（待核，会扣分）
+#   status        active / watch / archived
+
+companies:
+- id: example-feishu
+  name: 某某机器人
+  city: 北京
+  district: 海淀
+  tracks: [人形机器人, 具身大模型]
+  priority: 1
+  confidence: verified
+  status: active
+  funding:
+    latest_round: B轮
+    amount: 10亿元
+    date: "2026-05-01"
+    lead: [某一线基金]
+    follow: [某产业资本]
+  tier1_backers: [红杉中国, 经纬创投]
+  portal:
+    type: feishu
+    arg: "xxxxxxxx.jobs.feishu.cn"     # 门户域名，从公司官网「加入我们」找
+
+- id: example-beisen
+  name: 某某芯片
+  city: 上海
+  district: 张江
+  tracks: [AI芯片]
+  priority: 2
+  confidence: reported
+  status: active
+  funding:
+    latest_round: C轮
+    amount: 未查到
+    date: "2026-01-15"
+  tier1_backers: []
+  portal:
+    type: beisen
+    arg: "example"                     # 实际门户是 example.zhiye.com

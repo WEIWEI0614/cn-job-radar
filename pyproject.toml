@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cn-job-radar"
+version = "0.1.0"
+description = "Job hunting radar for the Chinese job market — tracks companies' own career portals (Feishu Hire / Moka / Beisen) instead of job boards, scores every opening against your profile."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "WEIWEI0614"}]
+keywords = ["job-search", "ats", "feishu", "moka", "beisen", "china", "career", "jobs", "radar"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+dependencies = ["PyYAML>=5.4"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+radar = "radar.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/WEIWEI0614/cn-job-radar"
+Issues = "https://github.com/WEIWEI0614/cn-job-radar/issues"
+
+[tool.setuptools]
+packages = ["radar", "radar.ui"]
+
+[tool.setuptools.package-data]
+"radar" = ["industries/*.yaml"]
+"radar.ui" = ["static/*.html"]

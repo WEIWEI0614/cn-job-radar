@@ -1,0 +1,63 @@
+# 行业包：通用（任意行业） / General (Any Industry)
+# 由 cn-job-radar 提供。可复制到 ~/.cn-job-radar/config/industries/ 覆盖内置版本。
+
+id: general
+name: 通用（任意行业）
+name_en: General (Any Industry)
+description: 不限定行业。只用通用岗位关键词，公司池完全由你自己维护。
+job_keywords:
+  strong:
+  - 产品经理
+  - 人力资源
+  - 供应链
+  - 品牌
+  - 商业分析
+  - 商务
+  - 客户成功
+  - 市场
+  - 战略
+  - 数据分析
+  - 法务
+  - 行政
+  - 解决方案
+  - 财务
+  - 运营
+  - 采购
+  - 销售
+  - 项目经理
+  normal:
+  - 分析师
+  - 工程师
+  - 开发
+  - 架构
+  - 测试
+  - 研发
+  - 研究员
+  - 算法
+  - 设计
+  - 运维
+strength_keywords:
+- 沟通
+- 协作
+- 项目管理
+- 数据分析
+- 英语
+- 跨部门
+- 落地
+- 从0到1
+gap_keywords:
+- 五年以上
+- 8年以上
+- 十年以上
+- 博士
+industry_signals: []
+tier1_investors:
+- 红杉中国
+- 高瓴创投
+- 经纬创投
+- 启明创投
+- 真格基金
+tier2_investors:
+- 深创投
+- 达晨财智
+- 中金资本
