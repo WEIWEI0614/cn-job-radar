@@ -212,6 +212,10 @@ Everything runs locally. Jobs fetch straight from public career-portal APIs; you
 
 The tool reads **only public job postings**. It does not touch résumés, does not log in anywhere, and stops when it meets a CAPTCHA or a login wall.
 
+> ⚠️ **Never publish `config/profile.yaml`.** Your target cities, strength keywords and gap keywords together can reconstruct your résumé. The company pool is safe to share — your profile is not.
+
+See [SECURITY.md](SECURITY.md) for the full data-handling statement, what the tool deliberately refuses to do, and how to report a problem.
+
 ---
 
 ## FAQ
