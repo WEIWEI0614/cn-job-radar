@@ -11,6 +11,8 @@
 
 [English](README.md) · [简体中文](README.zh-CN.md)
 
+**配套使用 →** [`jd-skill-atlas`](https://github.com/WEIWEI0614/jd-skill-atlas) —— 把本工具抓到的 JD 变成一张能力图谱：这个行业真正要求什么、该怎么学。
+
 </div>
 
 ---
@@ -229,6 +231,23 @@ radar industries             # 列出行业包
 **为什么有的岗位没有薪资？** 飞书招聘的接口不返回薪资。不是 bug。
 
 **想加的公司没有门户怎么办？** 跑 `radar discover`，或者去公司官网的「加入我们」页面找跳转链接，写进 `portals.yaml`。中国 ATS 门户有规律：北森是 `<英文名>.zhiye.com`；飞书招聘用的是随机串，只能搜。BOSS 直聘的公司页在程序访问时会返回反爬壳页，**不算验证通过**。
+
+---
+
+## 配套使用
+
+有一件配套工具，接着这个工具停下的地方往下做。
+
+**[jd-skill-atlas](https://github.com/WEIWEI0614/jd-skill-atlas)** 读取本工具产出的 JD 集合，把它变成一张排序好的能力图谱 —— 这个行业真正要求什么，逐条解释，并按前置依赖排出学习顺序。
+
+| | **cn-job-radar** | **[jd-skill-atlas](https://github.com/WEIWEI0614/jd-skill-atlas)** |
+|---|---|---|
+| 回答什么问题 | 现在有哪些岗位？ | 我该学什么才能拿到它们？ |
+| 核心资产 | 公司池 + 门户配置 | 技能词典（93 条，每条三层解释） |
+| 产出 | 每日打分日报 | 能力图谱 + 离线学习平台 |
+| 衔接方式 | `reports/*.json` → | → `atlas analyze reports/` |
+
+**一个的输出格式就是另一个的输入格式** —— 中间不需要任何胶水代码。
 
 ---
 

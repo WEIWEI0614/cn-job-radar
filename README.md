@@ -12,6 +12,8 @@ Watches **companies' own career portals** — not job boards — then scores eve
 
 [English](README.md) · [简体中文](README.zh-CN.md)
 
+**Pairs with →** [`jd-skill-atlas`](https://github.com/WEIWEI0614/jd-skill-atlas) — reads the JDs this tool collects and turns them into a ranked skill map: what the industry actually demands, and how to learn it.
+
 </div>
 
 ---
@@ -229,6 +231,23 @@ See [SECURITY.md](SECURITY.md) for the full data-handling statement, what the to
 **Why is salary empty for some jobs?** Feishu Hire doesn't publish salary in its API. Not a bug.
 
 **How do I add a company that has no portal?** Run `radar discover`, or find the portal link on the company's own careers page and add it to `portals.yaml`. Chinese ATS portals follow patterns — Beisen is `<english-name>.zhiye.com`; Feishu Hire uses random slugs you have to look up. BOSS Zhipin company pages return anti-bot shells when fetched, so they don't count as a verified portal.
+
+---
+
+## Pairs with
+
+There's a companion tool that picks up exactly where this one stops.
+
+**[jd-skill-atlas](https://github.com/WEIWEI0614/jd-skill-atlas)** reads the JD pile this tool produces and turns it into a ranked skill map — what the industry actually asks for, explained term by term, with a learning order derived from prerequisite dependencies.
+
+| | **cn-job-radar** | **[jd-skill-atlas](https://github.com/WEIWEI0614/jd-skill-atlas)** |
+|---|---|---|
+| Question it answers | What openings exist right now? | What do I need to learn to get them? |
+| Core asset | Company watchlist + portal config | Skill dictionary (93 skills, three layers each) |
+| Output | Scored daily report | Capability map + offline study platform |
+| Hand-off | `reports/*.json` → | → `atlas analyze reports/` |
+
+The output of one is the input format of the other — no glue code in between.
 
 ---
 

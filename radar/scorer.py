@@ -60,8 +60,8 @@ class ScoredJob:
     gaps: list[str] = field(default_factory=list)
     notes: list[str] = field(default_factory=list)
 
-    def to_dict(self) -> dict:
-        return {
+    def to_dict(self, include_jd: bool = True) -> dict:
+        d = {
             "title": self.job.title, "company": self.job.company, "company_id": self.job.company_id,
             "location": self.job.location, "salary": self.job.salary, "posted": self.job.posted,
             "url": self.job.url, "source": self.job.source, "track": self.track,
@@ -70,6 +70,12 @@ class ScoredJob:
             "gaps": self.gaps, "notes": self.notes,
             "strength_hits": self.hits.get("strength", []),
         }
+        # JD 正文默认一并导出：下游工具（技能图谱、术语解释）要靠它做分析，
+        # 丢了就得重新抓一遍。HTML/Markdown 日报不读这个字段，所以不会变大。
+        if include_jd:
+            d["jd"] = self.job.jd
+            d["dept"] = self.job.dept
+        return d
 
 
 # ---------------------------------------------------------------------------
