@@ -1,0 +1,828 @@
+# 人工智能 · 大模型 / Companies · AI & LLM
+# ---------------------------------------------------------------------------
+# 这是「人工智能 · 大模型」赛道的社区种子公司池 —— 直接复制到
+#   ~/.cn-job-radar/config/companies.yaml
+# 就能用。
+#
+# 公司名、融资轮次、投资方、招聘门户都是**公开信息**，来自企业公告、
+# 权威媒体与门户实测。
+#
+# 想加公司：在 companies 列表下追加一条即可，字段说明见 examples/companies.example.yaml。
+# 想改门户：改 portal 段；或写进 portals.yaml 让 `radar discover` 维护。
+#
+# ⚠️ 免责：融资数据随融资进展变化，投递前请以公司官方披露为准。
+# ---------------------------------------------------------------------------
+
+companies:
+- id: moonshot
+  name: 月之暗面
+  full_name: 北京月之暗面科技有限公司
+  city: 北京
+  district: 海淀（知春路）
+  tracks:
+  - 大模型
+  - Agent
+  - 多模态
+  stage: 成长期
+  founded: 2023
+  employees: 未查到
+  funding:
+    latest_round: C轮
+    amount: 5亿美元
+    date: '2025-12-31'
+    lead:
+    - IDG资本
+    follow:
+    - 阿里巴巴
+    - 腾讯投资
+    - 红杉中国
+    - 真格基金
+    - Monolith砺思资本
+    - 今日资本
+    - 源码资本
+    - 高榕创投
+    - 五源资本
+  tier1_backers:
+  - 红杉中国
+  - 真格基金
+  - 源码资本
+  - 五源资本
+  - IDG
+  portal:
+    type: feishu
+    arg: moonshot.jobs.feishu.cn
+  priority: 1
+  confidence: verified
+  status: active
+  notes: 投后估值 43 亿美元；Kimi 系列。门户已实测 200
+- id: baichuan
+  name: 百川智能
+  full_name: 北京百川智能科技有限公司
+  city: 北京
+  district: 海淀
+  tracks:
+  - 大模型
+  - 医疗大模型
+  stage: 成长期
+  founded: 2023
+  employees: 未查到
+  funding:
+    latest_round: A轮
+    amount: 50亿元
+    date: 2024-07
+    lead:
+    - 未查到
+    follow:
+    - 阿里巴巴
+    - 小米
+    - 腾讯投资
+    - 中金
+    - 北京市人工智能产业投资基金
+    - 深创投
+  tier1_backers:
+  - 深创投
+  - 小米
+  portal:
+    type: feishu
+    arg: cq6qe6bvfr6.jobs.feishu.cn
+  priority: 2
+  confidence: reported
+  status: active
+  notes: 王小川创立；2025 年起聚焦医疗大模型方向。门户已实测 200
+- id: 01ai
+  name: 零一万物
+  full_name: 北京零一万物科技有限公司
+  city: 北京
+  district: 海淀
+  tracks:
+  - 产业大模型
+  - 企业Agent
+  stage: 成长期
+  founded: 2023
+  employees: 未查到
+  funding:
+    latest_round: A轮
+    amount: 数亿美元
+    date: '2024'
+    lead:
+    - 未查到
+    follow:
+    - 阿里巴巴
+  tier1_backers:
+  - 阿里巴巴
+  portal:
+    type: feishu
+    arg: 01ai.jobs.feishu.cn
+  priority: 2
+  confidence: reported
+  status: active
+  notes: 李开复创立；2026-05 传 Pre-IPO 赴港（公司未确认）。门户已实测 200
+- id: deeplang
+  name: 深言科技
+  full_name: 北京深言科技有限责任公司
+  city: 北京
+  district: 海淀
+  tracks:
+  - 大模型
+  - 文本处理
+  stage: 成长期
+  founded: 2021
+  employees: 未查到
+  funding:
+    latest_round: B轮
+    amount: 未披露
+    date: '2025-05-21'
+    lead:
+    - 清华大学资管
+    follow:
+    - 红杉中国
+    - 腾讯投资
+    - 好未来
+    - 奇绩创坛
+    - 智源研究院
+    - 中关村发展集团
+    - 春华资本
+    - 英诺天使
+  tier1_backers:
+  - 红杉中国
+  - 腾讯
+  - 奇绩创坛
+  - 英诺天使
+  portal:
+    type: feishu
+    arg: deeplang.jobs.feishu.cn
+  priority: 2
+  confidence: verified
+  status: active
+  notes: 清华系；产品语鲸/达意。门户已实测 200
+- id: langboat
+  name: 澜舟科技
+  full_name: 北京澜舟科技有限公司
+  city: 北京
+  district: 海淀
+  tracks:
+  - 大模型
+  - 金融Agent
+  stage: 成长期
+  founded: 2021
+  employees: 未查到
+  funding:
+    latest_round: Pre-A+轮
+    amount: 一年内累计数亿元
+    date: 2022-2023
+    lead:
+    - 中关村科学城公司
+    follow:
+    - 创新工场
+    - 斯道资本Eight Roads
+  tier1_backers:
+  - 创新工场
+  portal: null
+  careers_url: https://langboat.com
+  priority: 3
+  confidence: reported
+  status: active
+  notes: 周明（原微软亚洲研究院副院长）创立；创新工场孵化。⚠️ 最近轮次较早，2025-2026 无新融资披露
+- id: lingxin
+  name: 聆心智能
+  full_name: 北京聆心智能科技有限公司
+  city: 北京
+  district: 海淀
+  tracks:
+  - 超拟人大模型
+  - 情感对话
+  - 心理健康
+  stage: 成熟期
+  founded: 2021
+  employees: 未查到
+  funding:
+    latest_round: 被智谱全资并购
+    amount: 未披露
+    date: 2023-09
+    lead:
+    - 智谱AI
+    follow:
+    - 星连资本
+    - 图灵创投
+    - 无限基金SEE Fund
+  tier1_backers:
+  - 智谱
+  portal: null
+  priority: 3
+  confidence: verified
+  status: watch
+  notes: ⚠️ 已是智谱全资子公司，无独立招聘门户 —— 投递走智谱体系
+- id: kunlun
+  name: 昆仑万维
+  full_name: 北京昆仑万维科技股份有限公司
+  city: 北京
+  district: 东城
+  tracks:
+  - 大模型
+  - AI应用
+  - AI音乐
+  - AI视频
+  stage: 已上市
+  founded: 2008
+  employees: 未查到
+  funding:
+    latest_round: A股上市
+    amount: —
+    date: '2015'
+    lead: []
+    follow: []
+  tier1_backers: []
+  portal: null
+  careers_url: https://campus.kunlun.com
+  priority: 3
+  confidence: unverified
+  status: active
+  notes: ⚠️ campus.kunlun.com 实测返回 403（疑反爬），入口待确认
+- id: siliconflow
+  name: 硅基流动
+  full_name: 北京硅基流动科技股份有限公司
+  city: 北京
+  district: 海淀（中关村东路）
+  tracks:
+  - AI Infra
+  - 推理引擎
+  - 大模型云
+  stage: 成长期
+  founded: 2023
+  employees: 未查到
+  funding:
+    latest_round: A轮
+    amount: 数亿元
+    date: '2025-06-09'
+    lead:
+    - 阿里云
+    follow:
+    - 创新工场
+    - 美团战投
+    - 耀途资本
+    - 华创资本
+    - 普华资本
+  tier1_backers:
+  - 创新工场
+  - 美团战投
+  - 耀途资本
+  portal: null
+  careers_url: https://www.siliconflow.cn
+  priority: 2
+  confidence: reported
+  status: active
+  notes: 袁进辉创立（原 OneFlow）。招聘入口未定位到 ATS 门户
+- id: luchentech
+  name: 潞晨科技
+  full_name: 北京潞晨科技有限公司
+  city: 北京
+  district: 海淀办公 / 大兴注册
+  tracks:
+  - AI Infra
+  - 训练框架
+  - 推理引擎
+  stage: 成长期
+  founded: 2021
+  employees: 未查到
+  funding:
+    latest_round: B轮
+    amount: 数亿元
+    date: '2026-03-18'
+    lead:
+    - 博华资本
+    - 某美元机构
+    follow:
+    - 红杉中国
+    - 创新工场
+    - 真格基金
+    - 蓝驰创投
+    - 亦庄国投
+    - 北京市人工智能产业投资基金
+    - 领沨资本
+  tier1_backers:
+  - 红杉中国
+  - 创新工场
+  - 真格基金
+  - 蓝驰创投
+  portal: null
+  careers_url: https://www.luchentech.com/join/
+  priority: 2
+  confidence: verified
+  status: active
+  notes: Colossal-AI 开源项目方；尤洋创立
+- id: aisphere
+  name: 爱诗科技
+  full_name: 北京爱诗科技有限公司
+  city: 北京
+  district: 海淀（苏州街）
+  tracks:
+  - AIGC视频生成
+  stage: 成长期
+  founded: 2023
+  employees: 未查到
+  funding:
+    latest_round: B+轮
+    amount: 1亿元
+    date: '2025-10-17'
+    lead:
+    - 复星锐正
+    - 同创伟业
+    - 顺禧基金
+    follow:
+    - 阿里巴巴
+    - 达晨财智
+    - 深创投
+    - 北京市人工智能产业投资基金
+    - 巨人网络
+  tier1_backers:
+  - 阿里巴巴
+  - 达晨财智
+  - 深创投
+  portal:
+    type: feishu
+    arg: aisphere.jobs.feishu.cn
+  priority: 2
+  confidence: verified
+  status: active
+  notes: PixVerse 视频生成。门户已实测 200
+- id: minimax
+  name: MiniMax
+  full_name: 上海稀宇极智科技有限公司
+  city: 上海
+  district: 含北京团队
+  tracks:
+  - 全模态大模型
+  - 视频生成
+  - 语音生成
+  stage: 成长期
+  founded: 2021
+  employees: 未查到
+  funding:
+    latest_round: 港股IPO（已通过聆讯）
+    amount: 累计约15.5亿美元
+    date: 2025-12
+    lead: []
+    follow:
+    - 阿里巴巴
+    - 腾讯投资
+    - 米哈游
+    - 小红书
+    - 小米
+    - 高瓴
+    - 红杉资本
+    - 经纬中国
+    - IDG资本
+  tier1_backers:
+  - 高瓴创投
+  - 红杉中国
+  - IDG
+  - 经纬创投
+  - 阿里巴巴
+  portal:
+    type: feishu
+    arg: vrfi1sk8a0.jobs.feishu.cn
+  priority: 2
+  confidence: verified
+  status: active
+  notes: ⚠️ 注册地上海，非纯北京企业；有北京团队。门户已实测 200
+- id: mthreads
+  name: 摩尔线程
+  full_name: 摩尔线程智能科技（北京）股份有限公司
+  city: 北京
+  district: 海淀（翠微中里）
+  tracks:
+  - GPU
+  - AI芯片
+  - 智算集群
+  stage: 已上市
+  founded: 2020
+  employees: 未查到
+  funding:
+    latest_round: 科创板上市 688795.SH
+    amount: —
+    date: '2025-12-05'
+    lead: []
+    follow:
+    - 厚雪资本
+    - 五源资本
+    - 红杉中国
+    - 深创投
+    - 纪源资本
+    - 腾讯投资
+    - 字节跳动
+    - 中移资本
+  tier1_backers:
+  - 五源资本
+  - 红杉中国
+  - 深创投
+  - 腾讯
+  portal:
+    type: beisen
+    arg: mthreads
+    note: 北森门户 mthreads.zhiye.com，已实测 200
+  priority: 2
+  confidence: verified
+  status: active
+  notes: 国产全功能 GPU。刚上市不久，扩招概率高
+- id: cambricon
+  name: 寒武纪
+  full_name: 中科寒武纪科技股份有限公司
+  city: 北京
+  district: 海淀
+  tracks:
+  - AI芯片
+  - 云边端
+  stage: 已上市
+  founded: 2016
+  employees: 未查到
+  funding:
+    latest_round: 科创板上市 688256.SH
+    amount: —
+    date: 2020-07
+    lead: []
+    follow: []
+  tier1_backers: []
+  portal: null
+  careers_url: https://www.cambricon.com
+  priority: 3
+  confidence: verified
+  status: active
+  notes: 国产 AI 芯片龙头；招聘入口在官网「加入我们」栏目
+- id: realai
+  name: 瑞莱智慧
+  full_name: 北京瑞莱智慧科技有限公司
+  city: 北京
+  district: 海淀（清华科技园）
+  tracks:
+  - AI安全
+  - 可信大模型
+  - AIGC检测
+  stage: 成长期
+  founded: 2018
+  employees: 未查到
+  funding:
+    latest_round: B1+B2轮
+    amount: 合计数亿元
+    date: 2025-07
+    lead:
+    - 星连资本
+    follow:
+    - 蚂蚁集团
+    - 达泰资本
+    - 考拉基金
+    - 北京市人工智能产业投资基金
+    - 招商局数字贸易基金
+    - 水木清华校友种子基金
+  tier1_backers:
+  - 蚂蚁集团
+  portal:
+    type: feishu
+    arg: realai.jobs.feishu.cn
+  priority: 2
+  confidence: verified
+  status: active
+  notes: 清华系 AI 安全。门户已实测 200
+- id: powerlaw
+  name: 幂律智能
+  full_name: 北京幂律智能科技有限责任公司
+  city: 北京
+  district: 朝阳（望京）
+  tracks:
+  - 法律大模型
+  stage: 成长期
+  founded: 2017
+  employees: 未查到
+  funding:
+    latest_round: Pre-B轮
+    amount: 近8000万元
+    date: '2023-12-07'
+    lead:
+    - 蓝驰创投
+    follow:
+    - 红杉中国
+    - 源码资本
+    - 线性资本
+    - 经纬创投
+    - 智谱AI
+    - 华宇科创
+  tier1_backers:
+  - 红杉中国
+  - 源码资本
+  - 线性资本
+  - 经纬创投
+  - 蓝驰创投
+  portal: null
+  careers_url: https://www.powerlaw.ai
+  priority: 3
+  confidence: reported
+  status: active
+  notes: 清华计算机系团队。⚠️ 最近轮次为 2023 年，需留意经营状况
+- id: aixcoder
+  name: 硅心科技
+  full_name: 北京硅心科技有限公司
+  city: 北京
+  district: 海淀（知春路）
+  tracks:
+  - AI编程
+  - AIGC for Code
+  stage: 成长期
+  founded: 2017
+  employees: 未查到
+  funding:
+    latest_round: B轮
+    amount: 未披露
+    date: 2025-04
+    lead:
+    - 中关村资本
+    - 中关村协同创新基金
+    follow:
+    - 高瓴创投
+    - 彬复资本
+    - 清流资本
+    - 三七互娱
+  tier1_backers:
+  - 高瓴创投
+  portal: null
+  careers_url: https://www.aixcoder.com
+  priority: 3
+  confidence: reported
+  status: active
+  notes: 产品 aiXcoder
+- id: infervision
+  name: 推想医疗
+  full_name: 推想医疗科技股份有限公司
+  city: 北京
+  district: 海淀（上地）
+  tracks:
+  - AI医疗影像
+  stage: 成长期
+  founded: 2016
+  employees: 未查到
+  funding:
+    latest_round: D+轮
+    amount: 3亿元
+    date: '2025'
+    lead:
+    - 襄禾资本
+    follow:
+    - 红杉资本
+    - 启明创投
+    - 元生资本
+    - 尚珹基金
+  tier1_backers:
+  - 红杉中国
+  - 启明创投
+  portal: null
+  careers_url: https://www.infervision.com/career.html
+  priority: 3
+  confidence: reported
+  status: active
+  notes: ⚠️ 招聘页实测 403 反爬，入口待确认
+- id: recurrai
+  name: 循环智能
+  full_name: 北京睿科伦智能科技有限公司
+  city: 北京
+  district: 海淀
+  tracks:
+  - 会话智能
+  - SalesTech
+  stage: 成长期
+  founded: 2016
+  employees: 未查到
+  funding:
+    latest_round: C轮
+    amount: 3800万美元
+    date: '2021'
+    lead:
+    - 博裕投资
+    - 红杉中国
+    follow:
+    - 金沙江创投
+    - 靖亚资本
+    - 真格基金
+    - 万物资本
+  tier1_backers:
+  - 红杉中国
+  - 真格基金
+  - 金沙江创投
+  portal: null
+  priority: 3
+  confidence: reported
+  status: watch
+  notes: ⚠️ 官网 dealtape.net 实测 502；且与月之暗面存在股权纠纷 —— 谨慎对待
+- id: sensetime
+  name: 商汤科技
+  full_name: 北京商汤科技开发有限公司
+  city: 北京
+  district: 海淀
+  tracks:
+  - 大模型
+  - CV
+  - 多模态
+  stage: 已上市
+  founded: 2014
+  employees: 未查到
+  funding:
+    latest_round: 港股上市 00020.HK
+    amount: —
+    date: 2021-12
+    lead: []
+    follow: []
+  tier1_backers: []
+  portal:
+    type: feishu
+    arg: sensetime.jobs.feishu.cn
+  careers_url: https://hr.sensetime.com
+  priority: 2
+  confidence: verified
+  status: active
+  notes: 日日新大模型。飞书门户与官网 hr 系统均可用
+- id: 4paradigm
+  name: 第四范式
+  full_name: 第四范式（北京）技术有限公司
+  city: 北京
+  district: 海淀
+  tracks:
+  - 企业级AI
+  - 行业大模型
+  stage: 已上市
+  founded: 2014
+  employees: 未查到
+  funding:
+    latest_round: 港股上市 6682.HK
+    amount: —
+    date: 2023-09
+    lead: []
+    follow: []
+  tier1_backers: []
+  portal: null
+  careers_url: https://www.4paradigm.com/about/recruit.html
+  priority: 2
+  confidence: verified
+  status: active
+  notes: 决策类 AI；招聘入口在官网
+- id: unisound
+  name: 云知声
+  full_name: 云知声智能科技股份有限公司
+  city: 北京
+  district: 海淀（西三旗）
+  tracks:
+  - AGI语音
+  - AI医疗
+  - 智慧生活
+  stage: 已上市
+  founded: 2012
+  employees: 未查到
+  funding:
+    latest_round: 港股上市 09678.HK
+    amount: 发行价205港元
+    date: '2025-06-30'
+    lead: []
+    follow:
+    - 启明创投
+    - 挚信资本
+    - 京东
+    - 高通
+  tier1_backers:
+  - 启明创投
+  portal:
+    type: beisen
+    arg: unisound
+    note: 北森门户 unisound.zhiye.com，已实测 200
+  priority: 2
+  confidence: verified
+  status: active
+  notes: 刚上市（2025-06），首日 +44.59%
+- id: deepglint
+  name: 格灵深瞳
+  full_name: 北京格灵深瞳信息技术股份有限公司
+  city: 北京
+  district: 海淀
+  tracks:
+  - CV
+  - 多模态
+  stage: 已上市
+  founded: 2013
+  employees: 未查到
+  funding:
+    latest_round: 科创板上市 688207.SH
+    amount: —
+    date: 2022-03
+    lead: []
+    follow: []
+  tier1_backers: []
+  portal:
+    type: feishu
+    arg: deepglint.jobs.feishu.cn
+  priority: 3
+  confidence: verified
+  status: active
+  notes: 门户已实测 200
+- id: mobvoi
+  name: 出门问问
+  full_name: 出门问问信息科技有限公司
+  city: 北京
+  district: 海淀
+  tracks:
+  - 生成式AI
+  - AIGC
+  stage: 已上市
+  founded: 2012
+  employees: 未查到
+  funding:
+    latest_round: 港股上市 02438.HK
+    amount: —
+    date: 2024-04
+    lead: []
+    follow: []
+  tier1_backers: []
+  portal:
+    type: feishu
+    arg: mobvoi.jobs.feishu.cn
+  priority: 3
+  confidence: verified
+  status: active
+  notes: 李志飞创立；门户已实测 200
+- id: zhongkewenge
+  name: 中科闻歌
+  full_name: 北京中科闻歌科技股份有限公司
+  city: 北京
+  district: 石景山
+  tracks:
+  - 决策智能大模型
+  stage: 已上市
+  founded: 2017
+  employees: 未查到
+  funding:
+    latest_round: 港股上市 1956.HK
+    amount: 发行价60.70港元
+    date: '2026-06-26'
+    lead: []
+    follow:
+    - 国开制造业转型升级基金
+    - 中国互联网投资基金
+    - 北京市人工智能产业投资基金
+    - 中关村科学城
+    - 深创投
+    - 中科创星
+  tier1_backers:
+  - 深创投
+  - 中科创星
+  portal: null
+  priority: 3
+  confidence: verified
+  status: active
+  notes: 中科院自动化所系；2026-06 刚上市，首日 +84%
+- id: haitian
+  name: 海天瑞声
+  full_name: 北京海天瑞声科技股份有限公司
+  city: 北京
+  district: 海淀
+  tracks:
+  - AI数据标注
+  - 合成数据
+  - 语音数据
+  stage: 已上市
+  founded: 2005
+  employees: 未查到
+  funding:
+    latest_round: 科创板上市 688787.SH
+    amount: —
+    date: 2021-08
+    lead: []
+    follow: []
+  tier1_backers: []
+  portal: null
+  careers_url: https://www.haitianruisheng.com
+  priority: 3
+  confidence: verified
+  status: active
+  notes: AI 训练数据服务商 —— 数据是具身智能的瓶颈环节，值得关注
+- id: baai
+  name: 智源研究院
+  full_name: 北京智源人工智能研究院
+  city: 北京
+  district: 海淀（五道口）
+  tracks:
+  - 基础模型
+  - 具身智能
+  - 多模态
+  - AI for Science
+  stage: 非营利研究机构
+  founded: 2018
+  employees: 未查到
+  funding:
+    latest_round: 非营利（北京市共建）
+    amount: —
+    date: ''
+    lead: []
+    follow: []
+  tier1_backers: []
+  portal:
+    type: moka
+    arg: baai,42174
+    note: Moka 门户，已实测 200
+  priority: 1
+  confidence: verified
+  status: active
+  notes: 非营利机构，且招研究员与工程师。Moka 门户格式：app.mokahr.com/campus-recruitment/baai/42174

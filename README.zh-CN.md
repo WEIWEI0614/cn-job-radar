@@ -137,6 +137,49 @@ radar ui                      # 可选：打开本地 Web 界面
 
 ---
 
+## 种子公司池
+
+不知道从哪开始？`examples/seed/` 里有一份现成的池子，直接复制就能用：
+
+| 文件 | 内容 |
+|---|---|
+| `robotics.yaml` | 43 家机器人 / 具身智能公司，含融资轮次、投资方与招聘门户 |
+| `ai.yaml` | 26 家人工智能公司 —— 大模型、AI Infra、AIGC、AI 芯片 |
+| `institutions.yaml` | 46 家该赛道的 VC / CVC / 国资基金 |
+| `portals.yaml` | 18 个已验证、可自动抓取的招聘门户 |
+
+```bash
+cp examples/seed/*.yaml ~/.cn-job-radar/config/
+radar run
+```
+
+里面**全部是公开信息** —— 融资公告、投资方名单、经 HTTP 状态码实测的招聘门户域名。
+
+> 融资数据会随融资进展变化，投递前请以公司官方披露为准。
+
+### 填你自己的信息
+
+你的个人信息只存在于**一个你永远不需要分享的文件**里：`~/.cn-job-radar/config/profile.yaml`。
+
+复制 `examples/profile.example.yaml`，把标了 `<<< 填写 >>>` 的地方改成你自己的 —— 目标城市、行业，以及最关键的 `candidate` 段：
+
+- `strength_keywords` —— 你**有**的东西。JD 每命中一个，「背景契合」分就高一点。
+- `gap_keywords` —— 你**没有**的东西。命中不仅扣分，还会在日报里单独标出来，让你清楚知道这条岗位差在哪，而不是靠猜。
+
+这些关键词只在本地和 JD 做比对，不会上传到任何地方。
+
+### 分享池子，但不分享你自己
+
+`tools/export_seed.py` 走的是反方向：把一个私人工作区里的个人痕迹（任何含「你 / 您 / 我」的句子、学历、雇主、职业规划）清洗掉，让你可以公开公司池而不暴露本人。
+
+```bash
+python tools/export_seed.py --src ~/my-radar/config --out examples/seed --dry-run
+```
+
+`--dry-run` 会先打印它打算改的每一处，确认无误再去掉参数真正落盘。
+
+---
+
 ## 命令
 
 ```bash

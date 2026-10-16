@@ -1,0 +1,628 @@
+# 创投机构 / Institutions · VC / CVC / State Funds
+# ---------------------------------------------------------------------------
+# 这是「创投机构」赛道的社区种子公司池 —— 直接复制到
+#   ~/.cn-job-radar/config/companies.yaml
+# 就能用。
+#
+# 公司名、融资轮次、投资方、招聘门户都是**公开信息**，来自企业公告、
+# 权威媒体与门户实测。
+#
+# 想加公司：在 companies 列表下追加一条即可，字段说明见 examples/companies.example.yaml。
+# 想改门户：改 portal 段；或写进 portals.yaml 让 `radar discover` 维护。
+#
+# ⚠️ 免责：融资数据随融资进展变化，投递前请以公司官方披露为准。
+# ---------------------------------------------------------------------------
+
+institutions:
+- id: legend-capital
+  name: 君联资本
+  type: VC
+  tier: 1
+  aum: 累计投 600+ 企业，106 家 IPO，近 100 家并购退出
+  city: 北京
+  district: 海淀
+  robotics_cases:
+  - 原力灵机
+  - 行知行机器人
+  stage_pref: 早期+成长期
+  hiring: true
+  careers_url: https://www.liepin.com/company/7887544/
+  notes: 已实测其猎聘岗位页可读；招 3 人，10月14日刚更新 —— 最优先
+- id: lanchi
+  name: 蓝驰创投
+  type: VC
+  tier: 1
+  aum: 在管近 200 亿元
+  city: 北京
+  district: 朝阳
+  robotics_cases:
+  - 银河通用
+  - 智元机器人
+  - 高仙机器人
+  - 万勋科技
+  - 它石智航
+  stage_pref: 种子轮 / A 轮为主
+  hiring: true
+  careers_url: https://www.lanchivc.com/?p=23
+  notes: 银河通用种子轮投资方 —— 早期判断力强
+- id: matrix
+  name: 经纬创投
+  type: VC
+  tier: 1
+  aum: 已投 700+ 家
+  city: 北京
+  district: 朝阳
+  robotics_cases:
+  - 银河通用
+  - 灵境智源
+  - 诺因智能
+  - 破壳机器人
+  - 萝博派对
+  stage_pref: 种子—成长期
+  hiring: true
+  careers_url: https://www.zhipin.com/companys/20e9aef95e9b4c2e0nF62ty-
+  notes: 银河通用种子轮投资方；BOSS直聘有机构主页
+- id: mingshi
+  name: 明势资本
+  type: VC
+  tier: 1
+  aum: 超 42 亿元
+  city: 北京
+  district: 朝阳（呼家楼）
+  robotics_cases:
+  - 逐际动力
+  - 云鲸智能
+  stage_pref: 天使—A 轮
+  hiring: true
+  careers_url: https://www.mingshivc.com/index/article?id=224
+  notes: JD 明确要求 3 年主流 VC/CVC 或产业技术背景
+- id: sourcecode
+  name: 源码资本
+  type: VC
+  tier: 1
+  aum: 五期人民币基金
+  city: 北京
+  district: 朝阳
+  robotics_cases:
+  - 宇树科技
+  - 银河通用
+  - 加速进化
+  - 自变量
+  - 梅卡曼德
+  - 法奥机器人
+  stage_pref: 早期—成长期
+  hiring: false
+  careers_url: https://www.sourcecodecap.com
+- id: hillhouse-ventures
+  name: 高瓴创投
+  type: VC
+  tier: 1
+  aum: 首期约 100 亿元
+  city: 北京
+  district: 朝阳
+  robotics_cases:
+  - 智元机器人
+  - 星海图
+  - 思灵机器人
+  - 灵初智能
+  - 它石智航
+  - 昆仑行
+  stage_pref: 种子—成长期
+  hiring: true
+  careers_url: https://www.hillhouseinvestment.cn
+  notes: 要求中英文读写、能读英文研报
+- id: shunwei
+  name: 顺为资本
+  type: VC
+  tier: 1
+  city: 北京
+  district: 朝阳
+  robotics_cases:
+  - 千寻智能
+  - 深朴智能
+  - 章鱼灵动
+  - 破壳机器人
+  stage_pref: 种子—B轮
+  hiring: true
+  careers_url: https://www.shunwei.com
+  notes: 要求英文听说读写流利；投了千寻智能、深朴智能
+- id: fivey
+  name: 五源资本
+  type: VC
+  tier: 1
+  city: 北京
+  district: 朝阳
+  robotics_cases:
+  - 星猿哲科技
+  - 松灵机器人
+  - 海柔创新
+  - 地平线
+  stage_pref: 早期—成长期
+  hiring: false
+  careers_url: https://www.5ycap.com
+- id: qiming
+  name: 启明创投
+  type: VC
+  tier: 1
+  city: 北京
+  district: 朝阳
+  robotics_cases:
+  - 它石智航
+  - 因时机器人
+  - 原力灵机
+  stage_pref: 早期—成长期
+  hiring: false
+  careers_url: https://www.qimingvc.com
+- id: nlvc
+  name: 北极光创投
+  type: VC
+  tier: 1
+  city: 北京
+  district: 朝阳
+  robotics_cases:
+  - 来福谐波（最大外部股东）
+  - 卡诺普机器人
+  stage_pref: 早期，重仓上游
+  hiring: false
+  notes: 重仓产业链上游零部件
+- id: frees
+  name: 峰瑞资本
+  type: VC
+  tier: 1
+  city: 北京
+  district: 朝阳
+  robotics_cases:
+  - 翼菲科技
+  - 因时机器人
+  - 星际光年
+  - 逐际动力
+  stage_pref: 天使—成长期
+  hiring: true
+  careers_url: mailto:hr@freesvc.com
+- id: glory
+  name: 耀途资本
+  type: VC
+  tier: 1
+  city: 北京
+  district: 朝阳
+  robotics_cases:
+  - 元戎启行
+  - 新石器
+  - 知来具身
+  - 追梦空天
+  stage_pref: 早期
+  hiring: false
+  careers_url: https://www.glory-ventures.com
+- id: qingsong
+  name: 青松基金
+  type: VC（早期）
+  tier: 1
+  aum: 20 亿元（4 支人民币基金）
+  city: 北京
+  robotics_cases:
+  - 佳安智能
+  - 地芯科技
+  stage_pref: 种子—Pre-B
+  hiring: false
+  careers_url: https://www.qingsongfund.com
+- id: cashcapital
+  name: 国科嘉和
+  type: VC（硬科技）
+  tier: 1
+  aum: 70 亿元
+  city: 北京
+  district: 东城（东直门）
+  robotics_cases:
+  - 博为机器人
+  - 斯坦德机器人
+  - 元化智能
+  - 行知行机器人
+  stage_pref: 早期—成长期
+  hiring: true
+  careers_url: https://www.cashcapital.cn/zxns.html
+- id: chuangxin
+  name: 创新工场
+  type: VC（早期）
+  tier: 1
+  city: 北京
+  district: 海淀
+  robotics_cases:
+  - 有鹿机器人
+  - 昆仑行机器人
+  - 无界动力
+  stage_pref: 天使—B轮
+  hiring: true
+  careers_url: https://www.chuangxin.com
+- id: innoangel
+  name: 英诺天使基金
+  type: 天使投资
+  tier: 1
+  city: 北京
+  district: 海淀
+  robotics_cases:
+  - 格松科技
+  - 手亿科技
+  - 朗毅机器人
+  - 灵御智能
+  stage_pref: 种子—Pre-A
+  hiring: true
+  careers_url: https://www.innoangel.com
+- id: zhenfund
+  name: 真格基金
+  type: 天使投资
+  tier: 1
+  city: 北京
+  district: 朝阳
+  robotics_cases:
+  - 未来不远
+  - 源策未来
+  - 将闲科技
+  stage_pref: 天使为主
+  hiring: false
+- id: fortunevc
+  name: 达晨财智
+  type: VC/PE
+  tier: 1
+  aum: 660 亿元
+  city: 北京
+  robotics_cases:
+  - 云深处
+  - 众擎机器人
+  - 千寻智能
+  - 因时机器人
+  - 无问芯穹
+  stage_pref: 早期—成长期
+  hiring: false
+  careers_url: https://www.fortunevc.com
+- id: huaying
+  name: 华映资本
+  type: VC
+  tier: 1
+  city: 北京
+  district: 朝阳（建外大街）
+  robotics_cases:
+  - 将闲科技
+  - 德塔智能
+  stage_pref: 早期—成长期
+  hiring: true
+  notes: ⚠️ 要求「完整募投管退全流程主导」经验；VP/总监级，需评估年限
+- id: meituan-longzhu
+  name: 美团龙珠
+  type: CVC
+  tier: 2
+  aum: 超 130 亿元
+  city: 北京
+  district: 朝阳（望京）
+  robotics_cases:
+  - 宇树科技
+  - 星海图
+  - 银河通用
+  - 法奥机器人
+  - 地瓜机器人
+  - 自变量
+  stage_pref: 早期为主
+  hiring: false
+- id: xiaomi-ventures
+  name: 小米战投
+  type: CVC
+  tier: 2
+  aum: 小米系机器人累计投 47 家、超 150 亿元
+  city: 北京
+  district: 海淀
+  robotics_cases:
+  - 自变量机器人
+  - 萝博派对
+  - 章鱼灵动
+  - 纬钛机器人
+  - 斯坦德
+  stage_pref: 天使—B轮
+  hiring: false
+- id: lenovo-capital
+  name: 联想创投
+  type: CVC
+  tier: 2
+  aum: 60-125 亿元
+  city: 北京
+  district: 海淀 / 朝阳上地
+  robotics_cases:
+  - 星动纪元
+  - 逐际动力
+  - 本末科技
+  - 原力灵机
+  - 维他动力
+  stage_pref: 早期—成长期
+  hiring: false
+  careers_url: https://capital.lenovo.com
+  notes: JD 明确点名「数学、物理」专业优先
+- id: baic-capital
+  name: 北汽产投
+  type: CVC
+  tier: 2
+  city: 北京
+  district: 顺义 / 经开区
+  robotics_cases:
+  - 智元机器人
+  - 银河通用
+  - 星动纪元
+  - 松延动力
+  - 小雨智造
+  stage_pref: 成长期 / 战略
+  hiring: false
+- id: zgc-ssc
+  name: 中关村科学城创新发展有限公司
+  type: 国资平台
+  tier: 2
+  aum: 注册资本 60 亿元
+  city: 北京
+  district: 海淀（裕惠大厦）
+  robotics_cases:
+  - 将闲科技
+  - 光轮智能
+  - 灵心巧手
+  - 超衍智能
+  stage_pref: 天使—B轮
+  hiring: true
+  careers_url: https://www.zgccity.com
+  notes: ⚠️ 具身智能岗要求「丰富的项目投资案例」—— 需备好案例清单
+- id: zgc-group
+  name: 中关村发展集团
+  type: 国资平台
+  tier: 2
+  aum: 基金系投 430+ AI 项目
+  city: 北京
+  district: 海淀
+  robotics_cases:
+  - 银河通用
+  - 月泉仿生
+  - 小雨智造
+  - 蓝点触控
+  - 本末科技
+  stage_pref: 天使—成长期
+  hiring: false
+  careers_url: https://www.zgcgroup.com.cn
+- id: shougang
+  name: 首钢基金
+  type: 国资平台
+  tier: 2
+  aum: 1000 亿元+（管理 12 支基金）
+  city: 北京
+  district: 石景山（首钢园）
+  robotics_cases:
+  - 宇树科技
+  - 银河通用
+  - 星海图
+  - 加速进化
+  - 松延动力
+  - 云深处
+  stage_pref: 初创—成熟期全覆盖
+  hiring: true
+  careers_url: https://www.liepin.com/company/8903908/
+  notes: 同时是「北京机器人产业发展投资基金」的管理方
+- id: cicc-capital
+  name: 中金资本
+  type: PE（券商系）
+  tier: 2
+  aum: 认缴管理规模超 6800 亿元
+  city: 北京
+  district: 朝阳
+  robotics_cases:
+  - 它石智航
+  - 自变量机器人
+  - 无界动力
+  stage_pref: 成长期 / Pre-IPO
+  hiring: true
+  careers_url: https://cicc.zhiye.com
+- id: e-town
+  name: 亦庄国投
+  type: 国资平台
+  tier: 2
+  aum: 基金管理规模 2100 亿元
+  city: 北京
+  district: 经开区（亦庄）
+  robotics_cases:
+  - 北京人形机器人创新中心
+  - 银河通用
+  - 亦数智能
+  stage_pref: 战略 / 成长期
+  hiring: true
+  careers_url: https://www.bdagroup.com.cn
+  notes: 亦庄是北京机器人产业核心承载区 —— 区域资源最集中
+- id: ht-fund
+  name: 洪泰基金
+  type: VC/PE
+  tier: 2
+  aum: 超 300 亿元
+  city: 北京
+  robotics_cases:
+  - 它石智航
+  - 星尘智能
+  - 微分智飞
+  - 面壁智能
+  stage_pref: 天使—成长期
+  hiring: false
+- id: miracleplus
+  name: 奇绩创坛
+  type: 加速器/早期
+  tier: 2
+  aum: 累计投 612 个项目
+  city: 北京
+  district: 海淀
+  robotics_cases:
+  - 朗毅机器人
+  - 电仔羊科技
+  stage_pref: 想法—A轮
+  hiring: false
+  careers_url: https://www.miracleplus.com
+- id: cas-invest
+  name: 中科院创投
+  type: 国资（中科院系）
+  tier: 2
+  city: 北京
+  robotics_cases:
+  - 中科原动力
+  stage_pref: 天使—A轮
+  hiring: false
+- id: sdic-hc
+  name: 国投创合
+  type: 国资母基金+直投
+  tier: 3
+  aum: 具身产业链投近百个项目、约 25 亿元
+  city: 北京
+  district: 西城
+  robotics_cases:
+  - 灵宝CASBOT
+  - 天机智能
+  stage_pref: 早中期 / 母基金
+  hiring: false
+- id: bj-robot-fund
+  name: 北京机器人产业发展投资基金
+  type: 国资基金
+  tier: 2
+  aum: 100 亿元
+  city: 北京
+  district: 石景山
+  robotics_cases:
+  - 宇树科技
+  - 银河通用
+  - 星海图
+  - 加速进化
+  - 松延动力
+  - 云深处
+  stage_pref: 成长期 / 战略
+  hiring: false
+  notes: 管理方为首程控股 / 北京国管
+- id: bj-ai-fund
+  name: 北京市人工智能产业投资基金
+  type: 国资基金
+  tier: 2
+  aum: 目标 100 亿元（首期 40 亿元）
+  city: 北京
+  district: 海淀（上地）
+  robotics_cases:
+  - 银河通用
+  - 星动纪元
+  - 北京人形
+  - 因时机器人
+  - 源络科技
+  stage_pref: 成长期 / 战略
+  hiring: false
+- id: galaxea-strategic
+  name: 星海图
+  type: 企业战投
+  tier: 2
+  city: 北京
+  district: 通州 / 亦庄
+  robotics_cases:
+  - 自身即具身智能公司
+  stage_pref: 战略投资
+  hiring: true
+  notes: 具身智能头部公司的战投部。在招「投资经理」25-50k·16薪，2-7年、硕士即可 —— 门槛比专业 VC 低，且能近距离接触本体+大模型一线
+- id: agile-strategic
+  name: 思灵机器人
+  type: 企业战投
+  tier: 2
+  city: 北京
+  district: 海淀
+  robotics_cases:
+  - 自身即工业机器人独角兽
+  stage_pref: 战略投资 / 并购
+  hiring: true
+  notes: 在招「投资经理/总监」40-70k，5-10年。薪资区间高于同级 VC，但要求年限也更长
+- id: sungrow-capital
+  name: 首程资本（CAN+）
+  type: 产业资本
+  tier: 3
+  city: 北京
+  district: 海淀
+  robotics_cases:
+  - 部分物理AI/机器人项目
+  hiring: true
+  notes: 猎头发布的「投资经理（物理AI/端侧芯片/机器人）」岗，22-35k·15薪，今日更新
+- id: kuainiao
+  name: 进化资本
+  type: VC
+  tier: 3
+  city: 北京
+  district: 朝阳（国贸）
+  robotics_cases:
+  - 未查到
+  hiring: true
+  notes: 投资经理（项目执行方向｜AI/硬科技），20-40K·13薪，3-5年，本科
+- id: fengyuan
+  name: 冯源投资
+  type: VC
+  tier: 3
+  city: 北京
+  robotics_cases:
+  - 未查到
+  hiring: true
+  notes: 硬科技股权投资总监/高投/投资经理，25-50K·15薪，3-5年，硕士
+- id: shengjing
+  name: 盛景网联
+  type: VC
+  tier: 3
+  city: 北京
+  district: 海淀（清河）
+  robotics_cases:
+  - 机器人全产业链方向
+  hiring: true
+  notes: 投资经理/总监（机器人全产业链），50-80K，5-10年，本科
+- id: hony
+  name: 弘毅投资
+  type: PE
+  tier: 3
+  city: 北京
+  district: 东城
+  robotics_cases:
+  - 新能源新材料方向含具身智能
+  hiring: true
+  notes: ⚠️ 投资总监岗要求 8 年以上，超出当前年限
+- id: jiuzhou
+  name: 九号公司
+  type: 产业方战投
+  tier: 3
+  city: 北京
+  district: 海淀
+  robotics_cases:
+  - 自身即机器人公司
+  hiring: true
+  notes: ⚠️ 投资经理要求 8 年以上，超出当前年限
+- id: sinolink
+  name: 疆亘资本
+  type: VC
+  tier: 3
+  city: 北京
+  district: 朝阳（望京）
+  robotics_cases:
+  - 机器人赛道
+  hiring: true
+  notes: 投资经理（机器人赛道），25-26K，5-10年，硕士
+- id: qianxiang
+  name: 千象资产
+  type: 基金
+  tier: 3
+  city: 北京
+  district: 东城（和平里）
+  robotics_cases:
+  - 人工智能/半导体
+  hiring: true
+  notes: 投资经理，25-40K·20薪，3-5年，硕士
+- id: daheng
+  name: 大恒科技
+  type: 产业方战投
+  tier: 3
+  city: 北京
+  robotics_cases:
+  - 机器人赛道
+  hiring: true
+  notes: 投资经理，20-40K·13薪，3-5年，本科
+- id: dingfeng
+  name: 鼎峰科创（武岳峰创投）
+  type: VC
+  tier: 3
+  city: 北京
+  district: 海淀（五道口）
+  robotics_cases:
+  - 未查到
+  hiring: true
+  notes: ⚠️ 硬科技投资岗明确要求博士学历，加进名单仅作长期跟踪

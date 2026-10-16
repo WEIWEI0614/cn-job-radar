@@ -138,6 +138,48 @@ Each pack ships job keywords, the active investors in that sector, and industry-
 
 ---
 
+## Seed company pools
+
+Not sure where to start? `examples/seed/` ships a curated pool you can copy straight in:
+
+| File | Contents |
+|---|---|
+| `robotics.yaml` | 43 robotics / embodied-AI companies, with funding round, investors and portal |
+| `ai.yaml` | 26 AI companies — foundation models, AI infra, AIGC, AI chips |
+| `institutions.yaml` | 46 VC / CVC / state funds active in these sectors |
+| `portals.yaml` | 18 verified ATS portals that can be fetched automatically |
+
+```bash
+cp examples/seed/*.yaml ~/.cn-job-radar/config/
+radar run
+```
+
+Everything in them is **public information** — funding announcements, investor names, and career-portal domains verified by HTTP status code.
+
+> Funding data changes as rounds close. Verify against the company's own announcement before you apply.
+
+### Making it yours
+
+Your personal details live in **one file you never share**: `~/.cn-job-radar/config/profile.yaml`.
+Copy `examples/profile.example.yaml` and fill in the `<<< fill in >>>` markers — target cities, industries, and most importantly the `candidate` block:
+
+- `strength_keywords` — what you *have*. Every JD hit raises your fit score.
+- `gap_keywords` — what you *don't*. Every hit costs points **and** gets flagged in the report, so you see exactly where you fall short instead of guessing.
+
+Nothing is uploaded anywhere — these keywords are only ever compared locally against job descriptions.
+
+### Sharing a pool without sharing yourself
+
+`tools/export_seed.py` runs the other direction: it strips personal traces (any sentence using 你/您/我, education, employers, career plans) out of a private workspace so you can publish the company pool and keep the person out of it.
+
+```bash
+python tools/export_seed.py --src ~/my-radar/config --out examples/seed --dry-run
+```
+
+`--dry-run` prints every field it would change, before it changes anything.
+
+---
+
 ## Commands
 
 ```bash

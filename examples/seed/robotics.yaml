@@ -1,0 +1,1392 @@
+# 机器人 · 具身智能 / Companies · Robotics & Embodied AI
+# ---------------------------------------------------------------------------
+# 这是「机器人 · 具身智能」赛道的社区种子公司池 —— 直接复制到
+#   ~/.cn-job-radar/config/companies.yaml
+# 就能用。
+#
+# 公司名、融资轮次、投资方、招聘门户都是**公开信息**，来自企业公告、
+# 权威媒体与门户实测。
+#
+# 想加公司：在 companies 列表下追加一条即可，字段说明见 examples/companies.example.yaml。
+# 想改门户：改 portal 段；或写进 portals.yaml 让 `radar discover` 维护。
+#
+# ⚠️ 免责：融资数据随融资进展变化，投递前请以公司官方披露为准。
+# ---------------------------------------------------------------------------
+
+companies:
+- id: galbot
+  name: 银河通用
+  full_name: 北京银河通用机器人有限公司
+  city: 北京
+  district: 海淀
+  tracks:
+  - 人形机器人本体
+  - 具身大模型
+  stage: 成长期
+  founded: 2023
+  employees: 未查到
+  funding:
+    latest_round: 战略轮
+    amount: 25亿元
+    date: '2026-03-02'
+    lead:
+    - 国家人工智能产业投资基金(大基金三期)
+    follow:
+    - 中国石化
+    - 中信投资控股
+    - 中银资产
+    - 上汽金控
+    - 中芯聚源
+    - 亦庄国投
+    - 鲲鹏基金
+    - 无锡创投
+    - 福建产投
+    - 成都科创投
+  tier1_backers:
+  - 美团龙珠
+  - 美团战投
+  - 经纬创投
+  - 蓝驰创投
+  - IDG
+  - 高瓴创投
+  portal:
+    type: feishu
+    arg: owm6ymi5v9b.jobs.feishu.cn/870797
+    note: 社招门户；校招门户在 /584984
+    health: empty
+    health_checked: '2026-10-16'
+    health_note: 两个门户 2026-10-16 实测 API 均返回 count=0，无在招岗位。需靠 BOSS/猎聘补
+  priority: 1
+  confidence: verified
+  status: active
+  notes: 国家大基金三期首次出手具身智能的标志性项目。⚠️ 官方门户当前空置，是本名单里最需要人工盯的一家
+- id: galaxea
+  name: 星海图
+  full_name: 星海图(北京)人工智能科技股份有限公司
+  city: 北京
+  district: 亦庄
+  tracks:
+  - 具身大模型
+  - 轮式双臂机器人
+  stage: 成长期
+  founded: 未查到
+  employees: 未查到
+  funding:
+    latest_round: B+轮
+    amount: 20亿元
+    date: '2026-04-02'
+    lead:
+    - 华登科技
+    - 蓝思科技
+    - 硅芯投资
+    - 时代伯乐
+    - 航发基金
+    follow:
+    - 修远资本
+    - 弘章投资
+    - 金融街资本
+    - 金浦投资
+    - 北京科创
+    - 中金资本
+    - 普华资本
+    - 洪泰基金
+  tier1_backers:
+  - 高瓴创投
+  - 凯辉基金
+  - 美团龙珠
+  - 今日资本
+  - 襄禾资本
+  - IDG
+  portal: null
+  careers_url: https://www.galaxeadynamics.com/career/2027campus
+  priority: 1
+  confidence: reported
+  status: active
+  notes: 半年内融资 30 亿；2027 校招开放算法/结构/大模型多岗；另在猎聘挂有'投资经理'岗（企业战投）
+- id: robotera
+  name: 星动纪元
+  full_name: 北京星动纪元科技有限公司
+  city: 北京
+  district: 海淀
+  tracks:
+  - 人形机器人本体
+  - 具身大模型
+  stage: 成长期
+  founded: 2023
+  employees: 未查到
+  funding:
+    latest_round: 战略轮
+    amount: 10亿元
+    date: '2026-03-05'
+    lead:
+    - 三星
+    follow:
+    - 高成投资
+    - 新加坡电信
+    - 中芯聚源
+    - 中金保时捷
+    - 吉利资本
+    - 阿里巴巴
+    - 联想
+    - 海尔
+    - 北汽
+    - 世纪金源
+  tier1_backers:
+  - 阿里巴巴
+  - 联想创投
+  - 北汽产投
+  - 海尔资本
+  portal: null
+  careers_url: https://www.robotera.com
+  priority: 1
+  confidence: verified
+  status: active
+  notes: 三星领投，阵容罕见；招聘走官网邮箱 HR@robotera.com，无飞书门户
+- id: noetix
+  name: 松延动力
+  full_name: 北京松延动力科技集团股份有限公司
+  city: 北京
+  district: 昌平 / 亦庄
+  tracks:
+  - 人形机器人本体
+  - 仿生机器人
+  stage: 成长期
+  founded: 2023
+  employees: 未查到
+  funding:
+    latest_round: B轮
+    amount: 近10亿元
+    date: '2026-03-02'
+    lead:
+    - 晨道资本(宁德时代系)
+    follow:
+    - 国科投资
+    - 京国盛基金
+    - 九合创投
+  tier1_backers: []
+  portal: null
+  careers_url: https://www.noetixrobotics.com
+  priority: 2
+  confidence: verified
+  status: active
+  notes: 宁德时代系领投；昌平区政府官网有报道。无飞书门户，BOSS 直聘上有岗位
+- id: booster
+  name: 加速进化
+  full_name: 北京加速进化科技有限公司
+  city: 北京
+  district: 海淀
+  tracks:
+  - 人形机器人本体
+  - 运控平台
+  stage: 成长期
+  founded: 2023
+  employees: 未查到
+  funding:
+    latest_round: B轮
+    amount: 近10亿元
+    date: '2026-04-17'
+    lead:
+    - 北京高精尖产业基金
+    - 京国盛基金
+    - 华控基金
+    follow:
+    - 联想之星
+    - 国海创新资本
+    - 交银资本
+    - 深创投
+    - 源码资本
+    - 英诺天使
+    - IDG
+  tier1_backers:
+  - 源码资本
+  - IDG
+  - 深创投
+  - 英诺天使
+  portal: null
+  priority: 2
+  confidence: reported
+  status: active
+  notes: 2026 在线职位约 132 个，同比大幅扩招 —— 岗位密度高的信号
+- id: bjhumanoid
+  name: 北京人形机器人创新中心
+  full_name: 北京人形机器人创新中心有限公司
+  city: 北京
+  district: 亦庄
+  tracks:
+  - 人形机器人本体
+  - 具身大模型
+  stage: 成长期
+  founded: 2023
+  employees: 官网称 1000+
+  funding:
+    latest_round: 首轮市场化融资
+    amount: 超7亿元
+    date: 2026-02
+    lead:
+    - 北京市人工智能产业投资基金
+    - 亦庄国投
+    - 北京高精尖基金
+    - 华控基金
+    follow:
+    - 百度
+    - 东土科技
+  tier1_backers:
+  - 北京市人工智能产业投资基金
+  - 亦庄国投
+  portal:
+    type: feishu
+    arg: zitd5je6f7j.jobs.feishu.cn
+    note: 已实测可抓，42 个在招岗位
+  priority: 1
+  confidence: verified
+  status: active
+  notes: 国家级平台，国资背书。「慧思开物」大模型。门户抓取最稳的一家
+- id: kunlunxing
+  name: 昆仑行
+  full_name: 北京昆仑行机器人科技有限公司
+  city: 北京
+  district: 亦庄
+  tracks:
+  - 人形机器人本体
+  - 世界模型
+  stage: 早期
+  founded: 2026
+  employees: 未查到
+  funding:
+    latest_round: 系列融资(3轮)
+    amount: 数十亿元
+    date: 2026-03 ~ 2026-06
+    lead:
+    - 高瓴创投
+    follow: []
+  tier1_backers:
+  - 高瓴创投
+  - 创新工场
+  portal: null
+  priority: 2
+  confidence: reported
+  status: active
+  notes: 注册 90 天融 3 轮，节奏极快；团队小，适合早期加入。门户未公开
+- id: spiritai
+  name: 千寻智能
+  full_name: 千寻智能(北京)科技股份有限公司
+  city: 北京
+  district: 海淀
+  tracks:
+  - 具身大模型
+  - VLA
+  stage: 成长期
+  founded: 2024
+  employees: 未查到
+  funding:
+    latest_round: A+轮
+    amount: 15亿元
+    date: '2026-06-08'
+    lead:
+    - 顺为资本
+    - 云锋基金
+    follow:
+    - 达晨财智
+    - 银河源汇
+    - 图灵基金
+    - 新鼎资本
+    - 庚辛资本
+    - Prosperity7
+    - 柏睿资本
+    - 弘晖基金
+  tier1_backers:
+  - 红杉中国
+  - 顺为资本
+  - 云锋基金
+  portal: null
+  priority: 1
+  confidence: reported
+  status: active
+  notes: 产业股东含华为/小米/宁德时代/京东（媒体口径）。总部北京+杭州双地
+- id: gigaai
+  name: 极佳视界
+  full_name: 北京极佳视界科技有限公司
+  city: 北京
+  district: 海淀
+  tracks:
+  - 世界模型
+  - 具身基模
+  stage: 成长期
+  founded: 未查到
+  employees: 未查到
+  funding:
+    latest_round: B2轮
+    amount: 10亿元
+    date: 2026-06
+    lead:
+    - 未查到
+    follow:
+    - 未查到
+  tier1_backers: []
+  portal: null
+  priority: 3
+  confidence: unverified
+  status: active
+  notes: 3 个月融 3 轮，估值增长快；但领投方报道未点名，需核实
+- id: xingyuanzhi
+  name: 星源智
+  full_name: 北京星源智机器人科技有限公司
+  city: 北京
+  district: 亦庄
+  tracks:
+  - 具身大脑
+  - 世界模型
+  stage: 早期
+  founded: 2025
+  employees: 未查到
+  funding:
+    latest_round: Pre-A轮
+    amount: 数亿元(累计10亿)
+    date: 2026-06
+    lead:
+    - 北工投资
+    - 中车资本
+    follow:
+    - 松禾资本
+    - 创东方
+    - 华控基金
+    - 国泰君安创新投资
+    - 江西金控
+    - 元生创投
+    - 智源研究院
+  tier1_backers:
+  - 高瓴创投
+  - 中科创星
+  - 元禾原点
+  portal: null
+  priority: 2
+  confidence: reported
+  status: active
+  notes: 成立 10 个月融 10 亿，三轮；ω-EVA 世界模型
+- id: guanglun
+  name: 光轮智能
+  full_name: 光轮智能(北京)科技有限公司
+  city: 北京
+  district: 海淀
+  tracks:
+  - 仿真平台
+  - 数据平台
+  stage: 成长期
+  founded: 2023
+  employees: 未查到
+  funding:
+    latest_round: A++/A+++轮
+    amount: 10亿元
+    date: 2026-03
+    lead:
+    - 新希望集团
+    - 鼎邦投资
+    - 奥克斯
+    - 建投华科
+    - 国方创新
+    follow:
+    - 中关村科学城基金
+    - 四川发展科创基金
+    - 山东发展科创投
+    - 巨人网络
+    - 宇信科技
+    - 宝通科技
+    - 中科产投
+  tier1_backers:
+  - 中关村科学城
+  - 建投投资
+  portal: null
+  priority: 2
+  confidence: reported
+  status: active
+  notes: 合成数据与仿真平台，属产业链「卖水人」环节
+- id: jiangxian
+  name: 将闲科技
+  full_name: 北京将闲科技有限公司
+  city: 北京
+  district: 海淀
+  tracks:
+  - 具身大模型
+  - 世界模型
+  stage: 早期
+  founded: 2025
+  employees: 0人（百科口径，疑为未更新）
+  funding:
+    latest_round: Pre-A++轮
+    amount: 数亿元(累计超10亿)
+    date: '2026-09-17'
+    lead:
+    - 未查到
+    follow:
+    - 中关村科学城
+    - 达晨财智
+    - 高信资本
+    - 华映资本
+  tier1_backers:
+  - 真格基金
+  - 红杉中国
+  - 美团龙珠
+  - 顺为资本
+  - 凯辉基金
+  - 元禾原点
+  - 创新工场
+  - 国开金融
+  portal: null
+  priority: 1
+  confidence: verified
+  status: active
+  notes: 清华在读博士生刘松铭创立；2025-12 成立，不到一年累计超 10 亿；Liber-0 模型在 RoboDojo 评测第一
+- id: simpleai
+  name: 深朴智能
+  full_name: 北京深朴智能科技有限公司
+  city: 北京
+  district: 朝阳 / 海淀
+  tracks:
+  - 具身大模型
+  - 服务机器人
+  stage: 早期
+  founded: 2025
+  employees: 未查到
+  funding:
+    latest_round: Pre-A+轮
+    amount: 数亿元
+    date: '2026-09-03'
+    lead:
+    - 未查到
+    follow:
+    - 珂玺资本
+    - 上海科创
+    - 金浦投资
+    - 亳州产投
+    - 上城资本
+    - 乾融资本
+    - 线性资本
+  tier1_backers:
+  - 线性资本
+  portal: null
+  priority: 2
+  confidence: verified
+  status: active
+  notes: 创始人李晓飞（清华博士，师从李克强院士）；雷军曾投过；酒店场景服务机器人
+- id: infiniteforce
+  name: 原力无限
+  full_name: 原力无限科技控股(浙江)有限公司
+  city: 北京
+  district: 北京运营（注册浙江）
+  tracks:
+  - 具身大脑
+  - 因果世界模型
+  stage: 成长期
+  founded: 未查到
+  employees: 未查到
+  funding:
+    latest_round: A轮及A+轮
+    amount: 近10亿元
+    date: 2026-08
+    lead:
+    - 敦鸿资产
+    - 头部国资平台
+    follow:
+    - 浙大科创集团
+    - 盐都国控
+    - 丽水市国资公司
+    - 创世伙伴CCV
+  tier1_backers: []
+  portal: null
+  priority: 3
+  confidence: reported
+  status: active
+  notes: 注册主体在浙江但与北京强关联；AtomBrain 因果世界模型。注意地域表述
+- id: delta
+  name: 德塔智能
+  full_name: 北京德塔源创智能科技有限公司
+  city: 北京
+  district: 未查到
+  tracks:
+  - 人形基础模型
+  - 数据采集
+  stage: 早期
+  founded: 未查到
+  employees: 未查到
+  funding:
+    latest_round: 天使++轮
+    amount: 近5亿元
+    date: 2026-07
+    lead:
+    - 未披露
+    follow:
+    - 上市公司产业方+头部财务机构
+  tier1_backers:
+  - 高瓴创投
+  - 联想创投
+  - 元禾控股
+  - 复星锐正
+  - 华映资本
+  portal: null
+  priority: 2
+  confidence: reported
+  status: active
+  notes: 通研院孵化；产业方股东含智元、乐聚、星海图
+- id: genisom
+  name: 智身科技
+  full_name: 智身科技(北京)有限公司
+  city: 北京
+  district: 大兴
+  tracks:
+  - 四足机器人
+  - 人形机器人本体
+  - 关节模组
+  - 具身大小脑
+  stage: 成长期
+  founded: 2024
+  employees: 未查到
+  funding:
+    latest_round: B轮
+    amount: 数亿元
+    date: 2026-09
+    lead:
+    - 阿联酋 Stone Venture(磊石资本)
+    follow:
+    - 洪山资本
+    - 粤科金融
+    - 吴中融玥
+    - 吴中金控
+    - 东软集团
+    - 豪鹏科技
+    - 远见资本
+    - 日盈电子
+  tier1_backers: []
+  portal: null
+  priority: 2
+  confidence: verified
+  status: active
+  notes: 累计量产突破 15000 台，月产能同比提升 10 倍 —— 量产是真的；中东资本领投
+- id: xiaoyu
+  name: 小雨智造
+  full_name: 北京小雨智造科技有限公司
+  city: 北京
+  district: 海淀
+  tracks:
+  - 具身大模型
+  - 工业机器人
+  stage: 成长期
+  founded: 2023
+  employees: 未查到
+  funding:
+    latest_round: B+轮
+    amount: 数亿元
+    date: '2026-05-09'
+    lead:
+    - 北汽产投
+    - 复星锐正
+    - 建发新兴
+    follow:
+    - 华业天成
+    - 贵州科创天使基金
+    - 滴滴
+    - 黎万强
+  tier1_backers:
+  - 小米产投
+  - 中关村发展
+  - 北京信产基金
+  portal: null
+  priority: 2
+  confidence: reported
+  status: active
+  notes: 「一脑多形」路线，主打工业场景
+- id: linkerhand
+  name: 灵心巧手
+  full_name: 灵心巧手(北京)科技股份有限公司
+  city: 北京
+  district: 海淀
+  tracks:
+  - 灵巧手
+  stage: 成长期
+  founded: 未查到
+  employees: 未查到
+  funding:
+    latest_round: B+轮
+    amount: 未披露(估值约30亿美元)
+    date: '2026-04-29'
+    lead:
+    - 中关村科学城基金
+    - 中银资产
+    - 复星创富
+    - 贝克资本
+    - 玖兆投资
+    follow:
+    - 弘章投资
+    - 元诺资本
+    - 中科英智
+    - 宇信科技
+    - 博佳资本
+    - 力合金融
+    - 华福投资
+    - 德同资本
+  tier1_backers:
+  - 红杉中国
+  - 高瓴创投
+  - 小米产投
+  - 国投先导
+  - 创世伙伴CCV
+  - 三星创投
+  - 海尔资本
+  portal: null
+  priority: 1
+  confidence: reported
+  status: active
+  notes: 月产 4000+ 台，市占率约 80%（媒体口径）；灵巧手赛道头部
+- id: paxini
+  name: 帕西尼
+  full_name: 帕西尼人工智能科技(北京)股份有限公司
+  city: 北京
+  district: 海淀
+  tracks:
+  - 触觉传感
+  - 灵巧手
+  - 人形机器人
+  - 数据采集
+  stage: 成长期
+  founded: 未查到
+  employees: 1000+（官网口径）
+  funding:
+    latest_round: B++轮
+    amount: 数亿元(累计超40亿)
+    date: '2026-09-16'
+    lead:
+    - 未披露
+    follow:
+    - 广新基金
+    - 四川省科创投资集团
+    - 宿迁产发创投
+    - 京铭资本
+  tier1_backers:
+  - 中银国际
+  - 鲲鹏基金
+  - 鼎晖百孚
+  portal: null
+  careers_url: https://www.paxini.com/cn/recruit
+  priority: 1
+  confidence: reported
+  status: active
+  notes: 累计融资超 40 亿；8 月战略轮由消费电子半导体巨头+中银国际领投
+- id: tashan
+  name: 他山科技
+  full_name: 北京他山科技股份有限公司
+  city: 北京
+  district: 门头沟 / 石景山
+  tracks:
+  - 触觉传感
+  - 触觉芯片
+  stage: 成长期
+  founded: 未查到
+  employees: 100-499
+  funding:
+    latest_round: B轮
+    amount: 数亿元(估值约70亿)
+    date: '2026-07-10'
+    lead:
+    - 均胜电子
+    - 太平创新
+    - 奥克斯
+    - 鹏翎股份
+    - 洪山资本
+    follow:
+    - 道氏技术
+    - 彬复资本
+  tier1_backers:
+  - 彬复资本
+  portal: null
+  careers_url: https://www.tashantec.com
+  priority: 2
+  confidence: reported
+  status: active
+  notes: 半年 3 轮；触觉芯片国产替代，市占 80%+（媒体口径）
+- id: inspire
+  name: 因时机器人
+  full_name: 北京因时机器人科技有限公司
+  city: 北京
+  district: 石景山
+  tracks:
+  - 灵巧手
+  - 微型伺服电缸
+  stage: 成长期
+  founded: 2016
+  employees: 未查到
+  funding:
+    latest_round: C1+C2轮
+    amount: 数亿元
+    date: '2026-02-24'
+    lead:
+    - 中国移动链长基金
+    - 深创投
+    - 北京市人工智能产业投资基金
+    follow:
+    - 启明创投
+    - TCL创投
+    - 博原资本
+    - 达晨财智
+    - 春华资本
+    - 金石数经基金
+  tier1_backers:
+  - 启明创投
+  - 达晨财智
+  - 深创投
+  portal: null
+  careers_url: https://www.inspire-robots.com
+  priority: 2
+  confidence: reported
+  status: active
+  notes: 2025 灵巧手交付破 1 万台；微型伺服电缸国内领先
+- id: kunwei
+  name: 坤维科技
+  full_name: 坤维(北京)科技有限公司
+  city: 北京
+  district: 亦庄
+  tracks:
+  - 六维力传感器
+  stage: 成长期
+  founded: 未查到
+  employees: 未查到
+  funding:
+    latest_round: B++轮
+    amount: 超亿元
+    date: '2026-06-08'
+    lead:
+    - 华泰紫金
+    - 金融街资本
+    follow:
+    - 富士康
+    - 天奇股份
+    - 中金资本
+    - 中信金石
+  tier1_backers:
+  - 深创投
+  - 中金资本
+  - 中银资产
+  portal: null
+  priority: 2
+  confidence: reported
+  status: active
+  notes: 半年两轮；六维力传感器是力控刚需
+- id: linktouch
+  name: 蓝点触控
+  full_name: 蓝点触控(北京)科技有限公司
+  city: 北京
+  district: 未查到
+  tracks:
+  - 六维力传感器
+  stage: 成长期
+  founded: 未查到
+  employees: 未查到
+  funding:
+    latest_round: D轮
+    amount: 数亿元
+    date: '2026-08-17'
+    lead:
+    - 广汽资本
+    follow:
+    - 德业股份
+    - 曦晨资本
+  tier1_backers:
+  - 红杉中国
+  - 宁德时代
+  portal: null
+  careers_url: https://www.link-touch.com
+  priority: 2
+  confidence: reported
+  status: active
+  notes: 股东含智元机器人、银河通用、上汽、中芯 —— 产业方深度绑定
+- id: yuequan
+  name: 月泉仿生
+  full_name: 北京达奇月泉仿生科技有限公司
+  city: 北京
+  district: 未查到
+  tracks:
+  - 仿生灵巧手
+  - 人形机器人
+  stage: 早期
+  founded: 未查到
+  employees: 未查到
+  funding:
+    latest_round: Pre-A+轮
+    amount: 数亿元
+    date: '2026-07-20'
+    lead:
+    - 未点名
+    follow:
+    - 长发基金
+    - 华控基金
+    - 华夏基金
+    - 国力民生
+    - 星科创投基金
+    - 中关村启航投资
+  tier1_backers:
+  - 中关村启航
+  - 洪泰基金
+  portal: null
+  priority: 3
+  confidence: reported
+  status: active
+  notes: 仿生路线，吉林大学任露泉院士团队背景
+- id: lingzu
+  name: 灵足时代
+  full_name: 北京灵足时代科技有限公司
+  city: 北京
+  district: 亦庄
+  tracks:
+  - 关节模组
+  - 一体化关节
+  stage: 早期
+  founded: 未查到
+  employees: 未查到
+  funding:
+    latest_round: A轮
+    amount: 未披露
+    date: 2026-04
+    lead:
+    - 未查到
+    follow:
+    - 九鼎投资旗下基金
+  tier1_backers:
+  - 小米集团
+  - 红杉中国
+  - 英诺天使
+  portal: null
+  priority: 3
+  confidence: unverified
+  status: active
+  notes: 小米+红杉种子基金背书；关节模组是本体降本关键
+- id: yunji
+  name: 云迹科技
+  full_name: 北京云迹科技股份有限公司
+  city: 北京
+  district: 海淀
+  tracks:
+  - 服务机器人
+  - 酒店场景
+  stage: 已上市
+  founded: 2014
+  employees: 未查到
+  funding:
+    latest_round: 港股上市 02670.HK
+    amount: —
+    date: '2025-10-16'
+    lead: []
+    follow: []
+  tier1_backers: []
+  portal: null
+  careers_url: https://www.yunjichina.com.cn
+  priority: 2
+  confidence: verified
+  status: active
+  notes: 已上市，校招 22 岗；稳定性最高的一类选择
+- id: mechmind
+  name: 梅卡曼德
+  full_name: 梅卡曼德(雄安)机器人科技股份有限公司
+  city: 北京
+  district: 雄安注册 / 北京运营
+  tracks:
+  - 3D视觉
+  - AI大脑
+  - 灵巧手
+  stage: 成熟期
+  founded: 2016
+  employees: 600+
+  funding:
+    latest_round: Pre-IPO
+    amount: 1.86亿美元
+    date: '2026-08-24'
+    lead:
+    - Baillie Gifford
+    - 泰康保险
+    - Jane Street
+    - 比亚迪 Golden Link
+    follow:
+    - 易方达
+    - Invus
+    - Ghisallo
+  tier1_backers:
+  - 红杉中国
+  - 美团
+  - IDG
+  - 源码资本
+  - 英特尔资本
+  - 启明创投
+  portal: null
+  priority: 2
+  confidence: verified
+  status: active
+  notes: Pre-IPO 阶段，外资长线基金进场；注意注册在雄安
+- id: qianyi
+  name: 迁移科技
+  full_name: 北京迁移科技有限公司
+  city: 北京
+  district: 海淀
+  tracks:
+  - 3D视觉
+  stage: 成长期
+  founded: 2017
+  employees: 21-50
+  funding:
+    latest_round: C轮
+    amount: 数千万
+    date: '2026-09-02'
+    lead:
+    - 海愿资本(紫金港资本)
+    follow: []
+  tier1_backers:
+  - 零一创投
+  - 微光创投
+  portal: null
+  priority: 3
+  confidence: reported
+  status: active
+  notes: 团队小（21-50 人），适合想承担更大责任的人
+- id: agile
+  name: 思灵机器人
+  full_name: 北京思灵机器人科技有限责任公司
+  city: 北京
+  district: 海淀
+  tracks:
+  - 工业机器人
+  - 机械臂
+  - 医疗机器人
+  stage: 成熟期
+  founded: 2018
+  employees: 2000-5000
+  funding:
+    latest_round: C轮/战略投资
+    amount: 未查到
+    date: 未查到
+    lead: []
+    follow: []
+  tier1_backers: []
+  portal: null
+  careers_url: https://www.agile-robots.cn/careers
+  priority: 1
+  confidence: reported
+  status: active
+  notes: 独角兽；⚠️ 自身在猎聘挂「投资经理/总监」岗（企业战投，40-70k）—— 产业转投资的跳板
+- id: rokae
+  name: 珞石机器人
+  full_name: 珞石(北京)机器人有限公司
+  city: 北京
+  district: 海淀
+  tracks:
+  - 工业机器人
+  - 协作机器人
+  - 人形机器人
+  stage: 已上市
+  founded: 2015
+  employees: 301-1000
+  funding:
+    latest_round: 已上市
+    amount: —
+    date: —
+    lead: []
+    follow: []
+  tier1_backers: []
+  portal: null
+  careers_url: https://www.rokae.com
+  priority: 3
+  confidence: reported
+  status: active
+  notes: 工业机器人龙头，稳定性高
+- id: ironman
+  name: 钢铁侠科技
+  full_name: 北京钢铁侠科技有限公司
+  city: 北京
+  district: 丰台
+  tracks:
+  - 双足仿人机器人
+  stage: 成熟期
+  founded: 2015
+  employees: 19（2025）
+  funding:
+    latest_round: B+轮
+    amount: 未披露
+    date: '2023-12-29'
+    lead: []
+    follow: []
+  tier1_backers: []
+  portal: null
+  priority: 3
+  confidence: reported
+  status: watch
+  notes: ⚠️ 融资停留在 2023 年，不符合「近期融资」标准，仅作产业地图补充
+- id: infinigence
+  name: 无问芯穹
+  full_name: 无问芯穹(北京)
+  city: 北京
+  district: 海淀
+  tracks:
+  - 算力中间层
+  - AI Infra
+  - 芯片
+  stage: 成长期
+  founded: 2023
+  employees: 未查到
+  funding:
+    latest_round: C轮
+    amount: 23亿元(累计43亿)
+    date: '2026-10-12'
+    lead:
+    - 未点名
+    follow:
+    - 杭州高新金投
+    - 社保中关村基金
+    - 珠海科技产业集团
+    - 厦门国兴投资
+    - 徐汇资本
+    - 国开科创
+    - 联想
+    - 腾讯
+    - 百度
+  tier1_backers:
+  - 红杉中国
+  - 启明创投
+  - 达晨财智
+  - 顺为资本
+  - 洪泰基金
+  - 联想创投
+  portal: null
+  priority: 2
+  confidence: verified
+  status: active
+  notes: 清华系；本周刚完成 23 亿 C 轮（2026-10-12），是最新的融资事件
+- id: houmo
+  name: 后摩智能
+  full_name: 后摩智能科技股份有限公司
+  city: 北京
+  district: 未查到
+  tracks:
+  - 存算一体芯片
+  stage: 成长期
+  founded: 2020
+  employees: 未查到
+  funding:
+    latest_round: 战略轮/Pre-IPO
+    amount: 数亿元
+    date: 未查到
+    lead:
+    - 中国移动产业链发展基金
+    follow: []
+  tier1_backers:
+  - 红杉中国
+  - 启明创投
+  - 经纬创投
+  - 联想创投
+  - 弘毅投资
+  portal: null
+  priority: 3
+  confidence: unverified
+  status: active
+  notes: ⚠️ 估值 140-160 亿来自投资者社区，非官方口径
+- id: horizon
+  name: 地平线
+  full_name: 地平线机器人
+  city: 北京
+  district: 未查到
+  tracks:
+  - 芯片
+  - 智驾
+  - 机器人
+  stage: 已上市
+  founded: 2015
+  employees: 未查到
+  funding:
+    latest_round: 港股上市
+    amount: —
+    date: —
+    lead: []
+    follow: []
+  tier1_backers:
+  - 五源资本
+  portal: null
+  careers_url: https://horizon-campus.hotjob.cn
+  priority: 3
+  confidence: verified
+  status: active
+  notes: 智驾芯片+机器人双线；已上市
+- id: zhipu
+  name: 智谱
+  full_name: 北京智谱华章科技股份有限公司
+  city: 北京
+  district: 海淀
+  tracks:
+  - 大模型
+  stage: 已上市
+  founded: 2019
+  employees: 500-1000
+  funding:
+    latest_round: 港股上市
+    amount: —
+    date: '2026-01-08'
+    lead: []
+    follow: []
+  tier1_backers: []
+  portal: null
+  priority: 3
+  confidence: verified
+  status: active
+  notes: 大模型六小龙之一，已港股上市；同时是原力灵机的投资方。⚠️ 原配门户 zhipu-ai.jobs.feishu.cn 于 2026-10-16 实测 404，已移除
+- id: modelbest
+  name: 面壁智能
+  full_name: 北京面壁智能科技有限责任公司
+  city: 北京
+  district: 海淀
+  tracks:
+  - 端侧大模型
+  stage: 成长期
+  founded: 2022
+  employees: 未查到
+  funding:
+    latest_round: B轮
+    amount: 数亿元
+    date: 2026-04
+    lead:
+    - 深创投
+    - 汇川产投
+    follow:
+    - 道禾长期投资
+    - 国泰君安创新投
+    - 武岳峰科创
+  tier1_backers:
+  - 深创投
+  portal: null
+  priority: 3
+  confidence: reported
+  status: active
+  notes: 端侧大模型，清华系
+- id: shengshu
+  name: 生数科技
+  full_name: 北京生数科技股份有限公司
+  city: 北京
+  district: 海淀
+  tracks:
+  - 多模态
+  - 世界模型
+  stage: 成长期
+  founded: 2023
+  employees: 未查到
+  funding:
+    latest_round: B轮
+    amount: 近20亿元
+    date: 2026-04
+    lead:
+    - 阿里云
+    follow:
+    - 中网投
+    - 九安海棠
+    - 好未来
+    - 光合创投
+    - 达泰资本
+    - 建发新兴
+    - 百度风投
+  tier1_backers:
+  - 阿里巴巴
+  portal: null
+  priority: 3
+  confidence: reported
+  status: active
+  notes: 视频生成+世界模型，清华朱军团队
+- id: octopus
+  name: 章鱼灵动
+  full_name: 北京章鱼灵动科技有限公司
+  city: 北京
+  district: 海淀
+  tracks:
+  - 物理AGI
+  stage: 早期
+  founded: 2025
+  employees: 未查到
+  funding:
+    latest_round: 战略投资
+    amount: 未披露
+    date: 2026-04
+    lead:
+    - 新加坡 K3
+    follow:
+    - 顺为资本
+    - 小米
+    - 高瓴创投
+    - 线性资本
+  tier1_backers:
+  - 顺为资本
+  - 小米产投
+  - 高瓴创投
+  - 线性资本
+  portal: null
+  priority: 3
+  confidence: reported
+  status: active
+  notes: ⚠️ 口语常称「章鱼动力」，工商全称是「章鱼灵动」，搜索时注意
+- id: dexmal
+  name: 原力灵机
+  full_name: 原力灵机（Dexmal）
+  city: 北京
+  district: 北京运营（注册重庆）
+  tracks:
+  - 具身智能
+  - 灵巧操作
+  stage: 成长期
+  founded: 2025
+  employees: 未查到
+  funding:
+    latest_round: 战略融资+合并
+    amount: 未披露
+    date: 2026-06
+    lead: []
+    follow:
+    - 阿里巴巴
+    - 智谱
+    - 阶跃星辰
+    - 商汤
+    - 华勤
+    - 上汽恒旭
+    - 金浦资本
+    - 元禾璞华
+    - 兴证资本
+    - 苏州基金
+    - 招银国际
+    - 厚雪基金
+  tier1_backers:
+  - 启明创投
+  - 君联资本
+  - 联想创投
+  - 蔚来资本
+  - 九坤创投
+  portal: null
+  priority: 2
+  confidence: reported
+  status: active
+  notes: 2026-06 与原力聚合合并；投资方阵容豪华（阿里+智谱+商汤+阶跃）
+- id: tars
+  name: 它石智航
+  full_name: 上海它石智航技术有限公司
+  city: 上海
+  district: 徐汇
+  tracks:
+  - 具身大模型
+  - 世界模型
+  stage: 成长期
+  founded: 2024
+  employees: 未查到
+  funding:
+    latest_round: Pre-A轮
+    amount: 4.55亿美元
+    date: '2026-04-16'
+    lead:
+    - 高瓴创投
+    - 红杉中国
+    - 美团战投
+    follow:
+    - 美团龙珠
+    - 中金资本
+    - 启明创投
+    - 线性资本
+    - 蓝驰创投
+    - 洪泰基金
+    - TCL创投
+    - 北京机器人产业发展投资基金
+  tier1_backers:
+  - 高瓴创投
+  - 红杉中国
+  - 美团龙珠
+  - 启明创投
+  - 蓝驰创投
+  - 线性资本
+  portal: null
+  priority: 2
+  confidence: verified
+  status: active
+  notes: 中国具身智能单轮融资纪录（4.55 亿美元）
+- id: psi
+  name: 灵初智能
+  full_name: 上海灵初智能
+  city: 上海
+  district: 徐汇
+  tracks:
+  - 灵巧操作
+  - 具身世界模型
+  stage: 成长期
+  founded: 2024
+  employees: 未查到
+  funding:
+    latest_round: 战略轮
+    amount: 过亿美元
+    date: 2026-08
+    lead:
+    - 未点名
+    follow:
+    - 拓普集团
+    - 奇瑞控股瑞丞基金
+    - 蓝思科技
+    - 三七互娱
+    - 芜湖市投控
+    - 复星创富
+  tier1_backers:
+  - 高瓴创投
+  - 蓝驰创投
+  portal: null
+  priority: 3
+  confidence: reported
+  status: active
+  notes: Psi-R2 / Psi-W0 模型；智元机器人早期参与
+- id: oymotion
+  name: 傲意科技
+  full_name: 上海傲意信息科技有限公司
+  city: 上海
+  district: 张江
+  tracks:
+  - 灵巧手
+  - 脑机接口
+  stage: 成长期
+  founded: 2015
+  employees: 未查到
+  funding:
+    latest_round: C1轮
+    amount: 1.5亿元
+    date: '2026-03-26'
+    lead:
+    - 中金脑科学基金
+    follow:
+    - 多家老股东
+  tier1_backers:
+  - 中金资本
+  portal: null
+  careers_url: https://www.oymotion.com
+  priority: 3
+  confidence: reported
+  status: active
+  notes: 灵巧手+脑机接口双线
+- id: agibot
+  name: 智元机器人
+  full_name: 智元创新(上海)科技股份有限公司
+  city: 上海
+  district: 临港
+  tracks:
+  - 人形机器人本体
+  - 具身大模型
+  stage: 成长期
+  founded: 2023
+  employees: 未查到
+  funding:
+    latest_round: —
+    amount: —
+    date: —
+    lead: []
+    follow: []
+  tier1_backers:
+  - 高瓴创投
+  - 蓝驰创投
+  - 腾讯
+  portal:
+    type: feishu
+    arg: agirobot.jobs.feishu.cn
+    note: 已确认飞书门户
+  priority: 2
+  confidence: verified
+  status: active
+  notes: 上海临港。飞书门户可自动抓

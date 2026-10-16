@@ -1,0 +1,124 @@
+# 招聘门户 / Discovered ATS portals
+# ---------------------------------------------------------------------------
+# 这是「已验证门户」赛道的社区种子公司池 —— 直接复制到
+#   ~/.cn-job-radar/config/companies.yaml
+# 就能用。
+#
+# 公司名、融资轮次、投资方、招聘门户都是**公开信息**，来自企业公告、
+# 权威媒体与门户实测。
+#
+# 想加公司：在 companies 列表下追加一条即可，字段说明见 examples/companies.example.yaml。
+# 想改门户：改 portal 段；或写进 portals.yaml 让 `radar discover` 维护。
+#
+# ⚠️ 免责：融资数据随融资进展变化，投递前请以公司官方披露为准。
+# ---------------------------------------------------------------------------
+
+portals:
+  galaxea:
+    type: beisen
+    arg: galaxea
+    http_status: 200
+    verified_at: '2026-10-16'
+    source: 公司官网招聘栏目跳转
+  robotera:
+    type: feishu
+    arg: k0fqxcszc9.jobs.feishu.cn
+    http_status: 200
+    verified_at: '2026-10-16'
+    source: 秋招岗位汇总（编程导航）
+  booster:
+    type: feishu
+    arg: booster.jobs.feishu.cn
+    http_status: 200
+    verified_at: '2026-10-16'
+    source: 官方投递短链
+  spiritai:
+    type: feishu
+    arg: nwd4iy9rd2s.jobs.feishu.cn
+    http_status: 200
+    verified_at: '2026-10-16'
+    source: 清华就业网校招公告
+  guanglun:
+    type: feishu
+    arg: lightwheel.jobs.feishu.cn
+    http_status: 200
+    verified_at: '2026-10-16'
+    source: 校招公告投递链接
+  moonshot:
+    type: feishu
+    arg: moonshot.jobs.feishu.cn
+    http_status: 200
+    verified_at: '2026-10-16'
+    source: 已验证
+  baichuan:
+    type: feishu
+    arg: cq6qe6bvfr6.jobs.feishu.cn
+    http_status: 200
+    verified_at: '2026-10-16'
+    source: 已验证
+  01ai:
+    type: feishu
+    arg: 01ai.jobs.feishu.cn
+    http_status: 200
+    verified_at: '2026-10-16'
+    source: 已验证
+  deeplang:
+    type: feishu
+    arg: deeplang.jobs.feishu.cn
+    http_status: 200
+    verified_at: '2026-10-16'
+    source: 已验证
+  realai:
+    type: feishu
+    arg: realai.jobs.feishu.cn
+    http_status: 200
+    verified_at: '2026-10-16'
+    source: 已验证
+  aisphere:
+    type: feishu
+    arg: aisphere.jobs.feishu.cn
+    http_status: 200
+    verified_at: '2026-10-16'
+    source: 已验证
+  minimax:
+    type: feishu
+    arg: vrfi1sk8a0.jobs.feishu.cn
+    http_status: 200
+    verified_at: '2026-10-16'
+    source: 已验证
+  sensetime:
+    type: feishu
+    arg: sensetime.jobs.feishu.cn
+    http_status: 200
+    verified_at: '2026-10-16'
+    source: 已验证
+  deepglint:
+    type: feishu
+    arg: deepglint.jobs.feishu.cn
+    http_status: 200
+    verified_at: '2026-10-16'
+    source: 已验证
+  mobvoi:
+    type: feishu
+    arg: mobvoi.jobs.feishu.cn
+    http_status: 200
+    verified_at: '2026-10-16'
+    source: 已验证
+  mthreads:
+    type: beisen
+    arg: mthreads
+    http_status: 200
+    verified_at: '2026-10-16'
+    source: 北森门户 mthreads.zhiye.com
+  unisound:
+    type: beisen
+    arg: unisound
+    http_status: 200
+    verified_at: '2026-10-16'
+    source: 北森门户 unisound.zhiye.com
+  baai:
+    type: moka
+    arg: baai,42174
+    http_status: 200
+    verified_at: '2026-10-16'
+    source: Moka 门户 app.mokahr.com/campus-recruitment/baai/42174
