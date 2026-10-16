@@ -49,6 +49,10 @@ radar ui                      # 可选：打开本地 Web 界面
 
 > 想先随便试试？`radar init --industry ai --cities 北京 --yes` 跳过所有提问。
 
+![求职雷达 Web 界面](docs/screenshot.png)
+
+<sub>本地 Web 界面（`radar ui`）。每个分数都能拆开 —— 卡片下方那条色带就是六个维度，哪一段没占满，分就是丢在那里。</sub>
+
 ---
 
 ## 它是怎么工作的

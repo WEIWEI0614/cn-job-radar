@@ -50,6 +50,10 @@ Reports land in `~/.cn-job-radar/reports/`.
 
 > Just want to look around first? `radar init --industry ai --cities 北京 --yes` skips all prompts.
 
+![cn-job-radar web UI](docs/screenshot.png)
+
+<sub>The local web UI (`radar ui`). Every score is decomposable — the bar under each card is the six dimensions, and any dimension below full width is where you lost points.</sub>
+
 ---
 
 ## How it works
