@@ -14,6 +14,8 @@ Watches **companies' own career portals** — not job boards — then scores eve
 
 **Pairs with →** [`jd-skill-atlas`](https://github.com/WEIWEI0614/jd-skill-atlas) — reads the JDs this tool collects and turns them into a ranked skill map: what the industry actually demands, and how to learn it.
 
+**Live demo →** [weiwei0614.github.io/cn-job-radar](https://weiwei0614.github.io/cn-job-radar/) — the real UI, preloaded with 13 companies and 355 official-portal openings.
+
 </div>
 
 ---

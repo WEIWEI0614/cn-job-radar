@@ -13,6 +13,8 @@
 
 **配套使用 →** [`jd-skill-atlas`](https://github.com/WEIWEI0614/jd-skill-atlas) —— 把本工具抓到的 JD 变成一张能力图谱：这个行业真正要求什么、该怎么学。
 
+**在线演示 →** [weiwei0614.github.io/cn-job-radar](https://weiwei0614.github.io/cn-job-radar/) —— 真实界面，已预载 13 家公司、355 个企业官方门户岗位。
+
 </div>
 
 ---
